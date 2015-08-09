@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="{$ecs_theme_path}/css/basic.css" rel="stylesheet" type="text/css" />
+<link href="{$ecs_theme_path}/css/gongyong.css" rel="stylesheet" type="text/css" />
+<link href="{$ecs_theme_path}/css/index2.css" rel="stylesheet" type="text/css" />
+<link href="{$ecs_theme_path}/css/my_extra.css" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,user.js,transport.js,ext/jquery.min.js,ext/my_user.js'}
+
+<body>
+<!-- #BeginLibraryItem+s "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+ <div class="l-wapper">
+  <div class="l-kuang">
+      <div class="l-logo"><a href="index.php"><img src="images/logo1.jpg" /></div></a>
+
+      <!--login page start-->
+      <!-- {if $action eq 'login'} -->
+      <div class="l-bg">
+        <form id="loginForm" action="user.php" method="post" onSubmit="return my_validate.go('login');">
+          <div class="reg-form" id="js-form-mobile">
+            <br />
+            <br />
+            <div>
+                <p class="js-mobile_pwd_ipt">邮箱/用户名/已验证手机</p>
+                <div class="cell">
+                    <input type="text" name="username" id="username" class="text1" maxlength="20" />
+                    <span class="color-red" id="username_notice"></span>
+                </div>
+            </div>
+            <div>
+                <p class="js-mobile_pwd_ipt">{$lang.label_password}</p>
+                <div class="cell">
+                    <input type="password" name="password" id="password" class="text2" />
+                    <input type="text" class="text" maxlength="20" style="display:none;" />
+                    <b class="icon-form ifm-view js-view-pwd" title="查看密码" style="display: none">
+                    查看密码</b> 
+                    <span class="color-red" id="password_notice"></span>
+                </div>
+            </div>
+          <!-- 判断是否启用验证码{if $enabled_captcha} -->
+            <div>
+                <p class="js-mobile_pwd_ipt">{$lang.comment_captcha}</p>
+                <div class="cell">
+                    <input type="text" name="captcha" id="captcha" class="text3 b_l" maxlength="11" /><div class="b_l"><img id="captcha_img_id" src="captcha.php?&{$rand}" alt="captcha" class="captcha-img new-captcha" /></div><p class="z-kam b_l">看不清，<a href="javascript:;" class="z-blue new-captcha">换一张</a></p>
+                    <span class="color-red" id="captcha_notice"></span>
+                </div>
+            </div>
+          <!-- {/if} -->
+            <div class="xuanzhe">
+              <label><input name="" type="checkbox" value="" class="fuxuano b_l" style="margin-top:2px;" />自动登录</label><a href="#" class="l-o">忘记密码？</a>
+            </div>
+            <div class="bottom">
+              <input type="hidden" name="act" value="act_login" />
+              <input type="hidden" name="back_act" value="{$back_act}" />
+              <input value="" type="submit" class="button btn-green" /><!--<a id="js-mobile_btn" href="javascript:;" ></a>-->
+            </div>
+            <p class="l-hui">还不是泰兴碧云会员？ <a href="user.php?act=register" class="l-zhu">免费注册</a></p>
+            <div class="h_log">
+              <p>合作网站账号登录：</p>
+                <ul class="d_hlogin">
+                  <li><a href="#"><img src="images/d_01.jpg" /></a></li>
+                    <li><a href="#"><img src="images/d_02.jpg" /></a></li>
+                    <li><a href="#"><img src="images/d_03.jpg" /></a></li>
+                    <li><a href="#"><img src="images/d_04.jpg" /></a></li>
+                </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--login page end-->
+      <!-- {/if} -->
+
+      <!--register page start-->
+      <!--{if $action eq 'register'}-->
+      <!-- {if $shop_reg_closed eq 1} -->
+        <div class="usBox">
+          <div class="usBox_2 clearfix">
+            <div class="f1 f5" align="center">{$lang.shop_register_closed}</div>
+          </div>
+        </div>
+      <!-- {else} -->
+      {insert_scripts files='utils.js'}
+        <div class="l-bg">
+          <form action="user.php" method="post" name="formUser" id="registerForm" onSubmit="return my_validate.go('register');">
+            <div class="reg-form" id="js-form-mobile">
+            <br>
+            <br>
+                <div>
+                    <p class="js-mobile_pwd_ipt">邮箱/用户名/已验证手机</p>
+                    <div class="cell">
+                        <input type="text" name="username" id="username" class="text1" maxlength="20" />
+                        <span style="color:#FF0000" id="username_notice"></span>
+                    </div>
+                </div>
+                <div>
+                    <p class="js-mobile_pwd_ipt">{$lang.label_password}</p>
+                    <div class="cell">
+                        <input type="password" name="password" id="password" class="text2" />
+                        <input type="text" id="password_hide" class="text" maxlength="20" style="display:none;" />
+                        <b class="icon-form ifm-view js-view-pwd" title="查看密码" style="display: none">
+                        查看密码</b> 
+                        <span class="color-red" id="password_notice"></span>
+                    </div>
+                </div>
+                <div>
+                    <p class="js-mobile_pwd_ipt">{$lang.label_confirm_password}</p>
+                    <div class="cell">
+                        <input type="password" name="confirm_password" id="confirm_password" class="text2" />
+                        <input type="text" id="passwd_answer_hide" class="text" maxlength="20" style="display:none;" />
+                        <b class="icon-form ifm-view js-view-pwd" title="查看密码" style="display: none">
+                        查看密码</b> 
+                        <span class="color-red" id="confirm_password_notice"></span>
+                    </div>
+                </div>
+                <!-- 判断是否启用验证码{if $enabled_captcha} -->
+                  <div>
+                      <p class="js-mobile_pwd_ipt">{$lang.comment_captcha}</p>
+                      <div class="cell">
+                          <input type="text" name="captcha" id="captcha" class="text3 b_l" maxlength="11" /><div class="b_l"><img id="captcha_img_id" src="captcha.php?&{$rand}" alt="captcha" class="captcha-img new-captcha" /></div><p class="z-kam b_l">看不清，<a href="javascript:;" class="z-blue new-captcha">换一张</a></p>
+                          <span class="color-red" id="captcha_notice"></span>
+                      </div>
+                  </div>
+                <!-- {/if} -->
+                <div class="xuanzhe">
+                  <label><input name="agreement" type="checkbox" value="1" checked="checked" class="fuxuano b_l" style="margin-top:2px;" />我已经阅读并同意<span class="z-blue">《<a href="#" class="z-blue">七库网注册协议</a>》</span></label>
+                </div>
+            <div class="bottom">
+              <input name="act" type="hidden" value="act_register" >
+              <input type="hidden" name="back_act" value="{$back_act}" />
+              <input type="submit" value="" id="submit" class="z-fffff" />
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--{/if}-->
+      <!--{/if}-->
+      <!--register page end-->
+
+      <div class="l-footer">
+           <p class="">
+             所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编、违者必究法律责任<br />
+             版权所有7库网装饰工程材料供应专家 2012 ©2014 京ICP备09043258号-2 京公网安备1101052730
+           </p>
+    </div>
+    </div>
+
+</div>
+
+<div class="blank"></div>
+
+<!--*会员注册界面 start-->
+<!--#会员注册界面 end-->
+
+<!--*找回密码界面 -->
+    <!--{if $action eq 'get_password'} -->
+    {insert_scripts files='utils.js'}
+    <script type="text/javascript">
+    {foreach from=$lang.password_js item=item key=key}
+      var {$key} = "{$item}";
+    {/foreach}
+    </script>
+<div class="usBox">
+  <div class="usBox_2 clearfix">
+    <form action="user.php" method="post" name="getPassword" onsubmit="return submitPwdInfo();">
+        <br />
+        <table width="70%" border="0" align="center">
+          <tr>
+            <td colspan="2" align="center"><strong>{$lang.username_and_email}</strong></td>
+          </tr>
+          <tr>
+            <td width="29%" align="right">{$lang.username}</td>
+            <td width="61%"><input name="user_name" type="text" size="30" class="inputBg" /></td>
+          </tr>
+          <tr>
+            <td align="right">{$lang.email}</td>
+            <td><input name="email" type="text" size="30" class="inputBg" /></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="hidden" name="act" value="send_pwd_email" />
+              <input type="submit" name="submit" value="{$lang.submit}" class="bnt_blue" style="border:none;" />
+              <input name="button" type="button" onclick="history.back()" value="{$lang.back_page_up}" style="border:none;" class="bnt_blue_1" />
+	    </td>
+          </tr>
+        </table>
+        <br />
+      </form>
+  </div>
+</div>
+<!--{/if}-->
+
+<!--*通过问题找回密码的确认找回账号界面 -->
+    <!--{if $action eq 'qpassword_name'} -->
+<div class="usBox">
+  <div class="usBox_2 clearfix">
+    <form action="user.php" method="post">
+        <br />
+        <table width="70%" border="0" align="center">
+          <tr>
+            <td colspan="2" align="center"><strong>{$lang.get_question_username}</strong></td>
+          </tr>
+          <tr>
+            <td width="29%" align="right">{$lang.username}</td>
+            <td width="61%"><input name="user_name" type="text" size="30" class="inputBg" /></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="hidden" name="act" value="get_passwd_question" />
+              <input type="submit" name="submit" value="{$lang.submit}" class="bnt_blue" style="border:none;" />
+              <input name="button" type="button" onclick="history.back()" value="{$lang.back_page_up}" style="border:none;" class="bnt_blue_1" />
+	    </td>
+          </tr>
+        </table>
+        <br />
+      </form>
+  </div>
+</div>
+<!--{/if}-->
+
+<!--*根据输入账号显示密码问题界面 -->
+    <!--{if $action eq 'get_passwd_question'} -->
+<div class="usBox">
+  <div class="usBox_2 clearfix">
+    <form action="user.php" method="post">
+        <br />
+        <table width="70%" border="0" align="center">
+          <tr>
+            <td colspan="2" align="center"><strong>{$lang.input_answer}</strong></td>
+          </tr>
+          <tr>
+            <td width="29%" align="right">{$lang.passwd_question}：</td>
+            <td width="61%">{$passwd_question}</td>
+          </tr>
+          <tr>
+            <td align="right">{$lang.passwd_answer}：</td>
+            <td><input name="passwd_answer" type="text" size="20" class="inputBg" /></td>
+          </tr>
+          <!-- 判断是否启用验证码{if $enabled_captcha} -->
+          <tr>
+            <td align="right">{$lang.comment_captcha}</td>
+            <td><input type="text" size="8" name="captcha" class="inputBg" />
+            <img src="captcha.php?is_login=1&{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" /> </td>
+          </tr>
+          <!--{/if}-->
+          <tr>
+            <td></td>
+            <td><input type="hidden" name="act" value="check_answer" />
+              <input type="submit" name="submit" value="{$lang.submit}" class="bnt_blue" style="border:none;" />
+              <input name="button" type="button" onclick="history.back()" value="{$lang.back_page_up}" style="border:none;" class="bnt_blue_1" />
+	    </td>
+          </tr>
+        </table>
+        <br />
+      </form>
+  </div>
+</div>
+<!--{/if}-->
+
+<!-- {if $action eq 'reset_password'} -->
+    <script type="text/javascript">
+    {foreach from=$lang.password_js item=item key=key}
+      var {$key} = "{$item}";
+    {/foreach}
+    </script>
+<div class="usBox">
+  <div class="usBox_2 clearfix">
+    <form action="user.php" method="post" name="getPassword2" onSubmit="return submitPwd()">
+      <br />
+      <table width="80%" border="0" align="center">
+        <tr>
+          <td>{$lang.new_password}</td>
+          <td><input name="new_password" type="password" size="25" class="inputBg" /></td>
+        </tr>
+        <tr>
+          <td>{$lang.confirm_password}:</td>
+          <td><input name="confirm_password" type="password" size="25"  class="inputBg"/></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="hidden" name="act" value="act_edit_password" />
+            <input type="hidden" name="uid" value="{$uid}" />
+            <input type="hidden" name="code" value="{$code}" />
+            <input type="submit" name="submit" value="{$lang.confirm_submit}" />
+          </td>
+        </tr>
+      </table>
+      <br />
+    </form>
+  </div>
+</div>
+<!--{/if}-->
+<!--#找回密码界面 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem+s "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+{foreach from=$lang.passport_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var username_exist = "{$lang.username_exist}";
+</script>
+</html>

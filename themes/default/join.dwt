@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,compare.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+{insert_scripts files='ext/from_join.js'}
+
+<!-- This content start -->
+<div class="content">
+      <P class="h_mbao"><a href="#" class="h_mian">首页</a> > <span class="h_hover">招商加盟</span></P> 
+        <div><img src="images/s_03.jpg" /></div>
+        <!--内容区开始-->
+        <div class="h_hver">
+          <div>
+              <div><img src="images/z_01.jpg" /></div>
+                <div><img src="images/z_02.jpg" /></div>
+                <div><img src="images/z_03.jpg" /></div>
+                <div><img src="images/z_04.jpg" /></div>
+                <div><img src="images/z_05.jpg" /></div>
+                <div><img src="images/z_06.jpg" /></div>
+                <div><img src="images/z_07.jpg" /></div>
+                <div><a id="example" href="javascript:;" class="z_join"><img src="images/z_08.jpg" /></a></div>
+            </div>
+        </div>
+        <!--内容结束-->
+        <div id="LoginBox">
+              <div class="row1"><a href="#" title="关闭窗口" class="close_btn" id="closeBtn">×</a>
+               </div>
+              <div class="row">
+              <table>
+              <tbody>
+              <tr><td width="23%" align="right"><span>*</span>企业名称：</td><td><input type="text" class="row_bt1" /></td></tr>
+              <tr><td align="right"><span>*</span>联系人：</td><td><input type="text" class="row_bt2" /></td></tr>
+              <tr><td align="right">部门：</td><td><input type="text" class="row_bt2" /></td></tr>
+              <tr><td align="right"><span>*</span>固定电话：</td><td><input type="text" class="row_bt2" /></td></tr>
+              <tr><td align="right"><span>*</span>手机：</td><td><input type="text" class="row_bt2" /></td></tr>
+              <tr><td align="right"><span>*</span>邮箱：</td><td><input type="text" class="row_bt1" /></td></tr>
+              <tr><td></td><td><a href="#"><input type="submit" class="s_in03" value="确认并提交" onclick="" /></a></td></tr>
+              </tbody>
+              </table>
+            </div>
+            </div>
+   </div>
+<!-- This content end -->
+
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

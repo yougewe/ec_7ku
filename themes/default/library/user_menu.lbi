@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <div class="b-left b_l">
+    <div class="h-l">
+      <!--菜单-->
+      <div class="h-img">
+        <img src="images/h-img.jpg" />
+        <div class="h-meng"><img src="images/h-img.png" /></div>
+        <p class="h-nanme">纸筒小淘</p>
+      </div>
+          <ul class="h-navo">
+          	<li><a href="user.php" {if $action eq 'default'}class="active"{/if}> {$lang.label_welcome}</a></li>
+            <li><a href="user.php?act=profile" {if $action eq 'profile'}class="active"{/if}>用户信息</a></li>
+            <li><a href="user.php?act=order_list"{if $action eq 'order_list'|| $action eq 'order_detail'}class="active"{/if}>我的订单</a></li>
+            <li><a href="user.php?act=address_list"{if $action eq 'address_list'}class="active"{/if}>收货地址</a></li>
+            <li><a href="user.php?act=message_list"{if $action eq 'message_list'}class="active"{/if}>我的留言</a></li>
+            <li><a href="user.php?act=comment_list"{if $action eq 'comment_list'}class="active"{/if}>我的评论</a></li>
+            <li><a href="user.php?act=bonus"{if $action eq 'bonus'}class="active"{/if}>我的优惠券</a></li>
+            <li><a href="user.php?act=order_list"{if $action eq 'order_list'|| $action eq 'order_detail'}class="active"{/if}>我的团购</a></li>
+            <li><a href="user.php?act=account_log"{if $action eq 'account_log'}class="active"{/if}>资金管理</a></li>
+            <li><a href="user.php?act=account_log"{if $action eq 'account_log'}class="active"{/if}>我要开店</a></li>
+            <li><a href="user.php?act=logout">安全退出</a></li>
+          </ul>
+        <!--菜单-->
+        </div>
+    </div>

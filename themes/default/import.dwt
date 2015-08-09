@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,compare.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!-- This content start -->
+  <div class="content">
+  	<P class="h_mbao"><a href="#" class="h_mian">首页</a> > <span class="h_hover">进口专区</span></P>
+  	<div><img src="../images/qunimg/zc2.jpg" width="1190" height="90"/></div>
+  	<div class="intent2 h_hver">
+        <!-- {foreach from=$goodslist item=goods1 name=name} -->
+        	<div class="z_qu z_bg{$smarty.foreach.name.iteration}">
+            	<div class="z_img"><a href="{$goods1.url}"><img src="{$goods1.goods_img}" style="width:479px;height:339px;" /></a></div>
+                <div class="z_des">
+                	<div class="pp_des">
+                    	<div class="t_block"></div>
+                        <div class="in_des">
+                        <h3>品牌：{$goods1.goods_style_name}</h3>
+                        <p>{$goods1.goods_brief}</p>
+                        </div>
+                        <div class="pp_des">
+                        	<dl>
+                            	<dt><p>￥<span>{$goods1.shop_price}</span></p><p>{$goods1.seller_note}</p></dt>
+                                <dd><a class="add_buy" href="javascript:ajaxToCart({$goods1.goods_id});">加入购物车</a><p><span>385</span>人已经购买</p></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- {/foreach} -->
+       <!--  <div class="z_qu z_bg4">
+        	<div class="z_img"><a href="#"><img src="../images/../images/qunimg/zq4.jpg" /></a></div>
+            <div class="z_des">
+            	<div class="pp_des">
+                	<div class="t_block"></div>
+                    <div class="in_des">
+                    <h3>门锁品牌：耶鲁yale</h3>
+                    <p>在已登记的正确密码前后，输入任何数字加以组合，也可以开启房门，轻松避免密码外泄。不同于以往“先开启在扫描”的方式，仅需一个动作即可轻松完成指纹扫描；扫描的方式更减少残留指纹，大大降低指纹被复制的可能性，安全独享。一般指纹锁使用密码/指纹登记等功能时不便。耶鲁yale电子锁独特的语音提示功能。</p>
+                    </div>
+                    <div class="pp_des">
+                    	<dl>
+                        	<dt><p>￥<span>880</span></p><p>进口专区，赶快来试试吧！</p></dt>
+                            <dd><a class="add_buy" href="#">加入购物车</a><p><span>385</span>人已经购买</p></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div class="clear"></div>
+    <!-- #BeginLibraryItem "/library/pages_my.lbi" --> <!-- #EndLibraryItem -->
+
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

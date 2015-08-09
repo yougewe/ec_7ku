@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,compare.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+{insert_scripts files='ext/my_lists.js'}
+
+<!-- This content start -->
+<div class="content">
+   		<P class="h_mbao"><a href="#" class="h_mian">首页</a> > <span class="h_hover">合作伙伴</span></P> 
+        <div><img src="images/s_03.jpg" /></div>
+        <!--内容区开始-->
+        <div class="h_hver">
+        	<div class="brand_lists">
+            <ul class="clearfix">
+                <li>
+                    <strong>
+                    <a target="_blank" href="#">TOTO</a>
+                    </strong>
+                    <p class="logo">
+                    <a target="_blank" href="partner_datil.html">
+                    <img src="images/h1.jpg" style="width: 138px; height: 60px; display: inline;" alt="TOTO">
+                    </a>
+                    </p>
+                    <p class="pro_cates">
+                    <a target="_blank" href="partner_datil.html"> 陶瓷薄板 </a>
+                    <a target="_blank" href="partner_datil.html"> 卫浴洁具 </a>
+                    <a target="_blank" href="partner_datil.html"> 花洒 </a>
+                    <a target="_blank" href="partner_datil.html"> 水龙头 </a>
+                    <a target="_blank" href="partner_datil.html"> 马桶-坐便器 </a>
+                    <a target="_blank" href="partner_datil.html"> 浴室柜-台盆柜 </a>
+                    <a target="_blank" href="partner_datil.html"> 蹲便器 </a>
+                    <a target="_blank" href="#"> 小便斗 </a>
+                    <a target="_blank" href="#"> 浴缸 </a>
+                    <a target="_blank" href="#"> 按摩浴缸 </a>
+                    <a target="_blank" href="#"> 面盆-台盆 </a>
+                    <a target="_blank" href="#"> 智能座便器 </a>
+                    <a target="_blank" href="#"> 淋浴房 </a>
+                    <a target="_blank" href="#"> 干手器 </a>
+                    <a target="_blank" href="#"> 感应洁具 </a>
+                    <b></b>
+                    </p>
+                </li>
+                <li>
+                <strong>
+                <a target="_blank" href="#">法恩莎</a>
+                </strong>
+                <p class="logo">
+                <a target="_blank" href="partner_datil.html">
+                <img src="images/h2.jpg" style="width: 138px; height: 60px; display: inline;" alt="法恩莎">
+                </a>
+                </p>
+                <p class="pro_cates">
+                <a target="_blank" href="partner_datil.html"> 墙砖瓷片 </a>
+                <a target="_blank" href="partner_datil.html"> 卫浴洁具 </a>
+                <a target="_blank" href="partner_datil.html"> 花洒 </a>
+                <a target="_blank" href="partner_datil.html"> 水龙头 </a>
+                <a target="_blank" href="##"> 马桶-坐便器 </a>
+                <a target="_blank" href="##"> 浴室柜-台盆柜 </a>
+                <a target="_blank" href="##"> 蹲便器 </a>
+                <a target="_blank" href="##"> 小便斗 </a>
+                <a target="_blank" href="##"> 浴缸 </a>
+                <a target="_blank" href="##"> 蒸汽房 </a>
+                <a target="_blank" href="##"> 按摩浴缸 </a>
+                <a target="_blank" href="##"> 面盆-台盆 </a>
+                <a target="_blank" href="##"> 水槽 </a>
+                <a target="_blank" href="##"> 智能座便器 </a>
+                <a target="_blank" href="##"> 淋浴房 </a>
+                <a target="_blank" href="##"> 集成水槽 </a>
+                <b></b>
+                </p>
+                </li>
+                <li>
+                <strong>
+                <a target="_blank" href="/pinpai/detail-26">惠达</a>
+                </strong>
+                <p class="logo">
+                <a target="_blank" href="/pinpai/detail-26">
+                <img src="images/h3.jpg" style="width: 138px; height: 60px; display: inline;" alt="惠达">
+                </a>
+                </p>
+                <p class="pro_cates">
+                <a target="_blank" href="/pinpai/brand-26-cate-4845"> 抛光砖 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4945"> 卫浴洁具 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4946"> 花洒 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4947"> 水龙头 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4949"> 马桶-坐便器 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4950"> 浴室柜-台盆柜 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4951"> 蹲便器 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4952"> 小便斗 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4956"> 浴缸 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4957"> 蒸汽房 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4959"> 按摩浴缸 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4960"> 面盆-台盆 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4961"> 水槽 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4963"> 角阀 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4964"> 智能座便器 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4967"> 淋浴房 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4970"> 感应洁具 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-5254"> 集成水槽 </a>
+                <b></b>
+                </p>
+                </li>
+                <li>
+                <strong>
+                <a target="_blank" href="/pinpai/detail-172">春红</a>
+                </strong>
+                <p class="logo">
+                <a target="_blank" href="/pinpai/detail-172">
+                <img src="images/h4.jpg" style="width: 138px; height: 60px; display: inline;" alt="春红">
+                </a>
+                </p>
+                <p class="pro_cates">
+                <a target="_blank" href="/pinpai/brand-172-cate-4841"> 竹地板 </a>
+                <b></b>
+                </p>
+                </li>
+                <li>
+                <strong>
+                <a target="_blank" href="/pinpai/detail-173">九木堂</a>
+                </strong>
+                <p class="logo">
+                <a target="_blank" href="/pinpai/detail-173">
+                <img src="images/h5.jpg" style="width: 138px; height: 60px; display: inline;" alt="九木堂">
+                </a>
+                </p>
+                <p class="pro_cates">
+                <a target="_blank" href="/pinpai/brand-173-cate-4841"> 竹地板 </a>
+                <b></b>
+                </p>
+                </li>
+                <li>
+                    <strong>
+                    <a target="_blank" href="#">TOTO</a>
+                    </strong>
+                    <p class="logo">
+                    <a target="_blank" href="#">
+                    <img src="images/h6.jpg" style="width: 138px; height: 60px; display: inline;" alt="TOTO">
+                    </a>
+                    </p>
+                    <p class="pro_cates">
+                    <a target="_blank" href="#"> 陶瓷薄板 </a>
+                    <a target="_blank" href="#"> 卫浴洁具 </a>
+                    <a target="_blank" href="#"> 花洒 </a>
+                    <a target="_blank" href="#"> 水龙头 </a>
+                    <a target="_blank" href="#"> 马桶-坐便器 </a>
+                    <a target="_blank" href="#"> 浴室柜-台盆柜 </a>
+                    <a target="_blank" href="#"> 蹲便器 </a>
+                    <a target="_blank" href="#"> 小便斗 </a>
+                    <a target="_blank" href="#"> 浴缸 </a>
+                    <a target="_blank" href="#"> 按摩浴缸 </a>
+                    <a target="_blank" href="#"> 面盆-台盆 </a>
+                    <a target="_blank" href="#"> 智能座便器 </a>
+                    <a target="_blank" href="#"> 淋浴房 </a>
+                    <a target="_blank" href="#"> 干手器 </a>
+                    <a target="_blank" href="#"> 感应洁具 </a>
+                    <b></b>
+                    </p>
+                </li>
+                <li>
+                <strong>
+                <a target="_blank" href="#">法恩莎</a>
+                </strong>
+                <p class="logo">
+                <a target="_blank" href="/pinpai/detail-21">
+                <img src="images/h7.jpg" style="width: 138px; height: 60px; display: inline;" alt="法恩莎">
+                </a>
+                </p>
+                <p class="pro_cates">
+                <a target="_blank" href="/pinpai/brand-21-cate-4844"> 墙砖瓷片 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4945"> 卫浴洁具 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4946"> 花洒 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4947"> 水龙头 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4949"> 马桶-坐便器 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4950"> 浴室柜-台盆柜 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4951"> 蹲便器 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4952"> 小便斗 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4956"> 浴缸 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4957"> 蒸汽房 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4959"> 按摩浴缸 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4960"> 面盆-台盆 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4961"> 水槽 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4964"> 智能座便器 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4967"> 淋浴房 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-5254"> 集成水槽 </a>
+                <b></b>
+                </p>
+                </li>
+                <li>
+                <strong>
+                <a target="_blank" href="/pinpai/detail-26">惠达</a>
+                </strong>
+                <p class="logo">
+                <a target="_blank" href="/pinpai/detail-26">
+                <img src="images/h8.jpg" style="width: 138px; height: 60px; display: inline;" alt="惠达">
+                </a>
+                </p>
+                <p class="pro_cates">
+                <a target="_blank" href="/pinpai/brand-26-cate-4845"> 抛光砖 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4945"> 卫浴洁具 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4946"> 花洒 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4947"> 水龙头 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4949"> 马桶-坐便器 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4950"> 浴室柜-台盆柜 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4951"> 蹲便器 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4952"> 小便斗 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4956"> 浴缸 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4957"> 蒸汽房 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4959"> 按摩浴缸 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4960"> 面盆-台盆 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4961"> 水槽 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4963"> 角阀 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4964"> 智能座便器 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4967"> 淋浴房 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4970"> 感应洁具 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-5254"> 集成水槽 </a>
+                <b></b>
+                </p>
+                </li>
+                <li>
+                <strong>
+                <a target="_blank" href="/pinpai/detail-172">春红</a>
+                </strong>
+                <p class="logo">
+                <a target="_blank" href="/pinpai/detail-172">
+                <img src="images/h9.jpg" style="width: 138px; height: 60px; display: inline;" alt="春红">
+                </a>
+                </p>
+                <p class="pro_cates">
+                <a target="_blank" href="/pinpai/brand-172-cate-4841"> 竹地板 </a>
+                <b></b>
+                </p>
+                </li>
+                <li>
+                <strong>
+                <a target="_blank" href="/pinpai/detail-173">九木堂</a>
+                </strong>
+                <p class="logo">
+                <a target="_blank" href="/pinpai/detail-173">
+                <img src="images/h10.jpg" style="width: 138px; height: 60px; display: inline;" alt="九木堂">
+                </a>
+                </p>
+                <p class="pro_cates">
+                <a target="_blank" href="/pinpai/brand-173-cate-4841"> 竹地板 </a>
+                <b></b>
+                </p>
+                </li>
+                <li>
+                    <strong>
+                    <a target="_blank" href="#">TOTO</a>
+                    </strong>
+                    <p class="logo">
+                    <a target="_blank" href="#">
+                    <img src="images/h11.jpg" style="width: 138px; height: 60px; display: inline;" alt="TOTO">
+                    </a>
+                    </p>
+                    <p class="pro_cates">
+                    <a target="_blank" href="#"> 陶瓷薄板 </a>
+                    <a target="_blank" href="#"> 卫浴洁具 </a>
+                    <a target="_blank" href="#"> 花洒 </a>
+                    <a target="_blank" href="#"> 水龙头 </a>
+                    <a target="_blank" href="#"> 马桶-坐便器 </a>
+                    <a target="_blank" href="#"> 浴室柜-台盆柜 </a>
+                    <a target="_blank" href="#"> 蹲便器 </a>
+                    <a target="_blank" href="#"> 小便斗 </a>
+                    <a target="_blank" href="#"> 浴缸 </a>
+                    <a target="_blank" href="#"> 按摩浴缸 </a>
+                    <a target="_blank" href="#"> 面盆-台盆 </a>
+                    <a target="_blank" href="#"> 智能座便器 </a>
+                    <a target="_blank" href="#"> 淋浴房 </a>
+                    <a target="_blank" href="#"> 干手器 </a>
+                    <a target="_blank" href="#"> 感应洁具 </a>
+                    <b></b>
+                    </p>
+                </li>
+                <li>
+                <strong>
+                <a target="_blank" href="#">法恩莎</a>
+                </strong>
+                <p class="logo">
+                <a target="_blank" href="/pinpai/detail-21">
+                <img src="images/h12.jpg" style="width: 138px; height: 60px; display: inline;" alt="法恩莎">
+                </a>
+                </p>
+                <p class="pro_cates">
+                <a target="_blank" href="/pinpai/brand-21-cate-4844"> 墙砖瓷片 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4945"> 卫浴洁具 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4946"> 花洒 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4947"> 水龙头 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4949"> 马桶-坐便器 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4950"> 浴室柜-台盆柜 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4951"> 蹲便器 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4952"> 小便斗 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4956"> 浴缸 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4957"> 蒸汽房 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4959"> 按摩浴缸 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4960"> 面盆-台盆 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4961"> 水槽 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4964"> 智能座便器 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-4967"> 淋浴房 </a>
+                <a target="_blank" href="/pinpai/brand-21-cate-5254"> 集成水槽 </a>
+                <b></b>
+                </p>
+                </li>
+                <li>
+                <strong>
+                <a target="_blank" href="/pinpai/detail-26">惠达</a>
+                </strong>
+                <p class="logo">
+                <a target="_blank" href="/pinpai/detail-26">
+                <img src="images/h13.jpg" style="width: 138px; height: 60px; display: inline;" alt="惠达">
+                </a>
+                </p>
+                <p class="pro_cates">
+                <a target="_blank" href="/pinpai/brand-26-cate-4845"> 抛光砖 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4945"> 卫浴洁具 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4946"> 花洒 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4947"> 水龙头 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4949"> 马桶-坐便器 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4950"> 浴室柜-台盆柜 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4951"> 蹲便器 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4952"> 小便斗 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4956"> 浴缸 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4957"> 蒸汽房 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4959"> 按摩浴缸 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4960"> 面盆-台盆 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4961"> 水槽 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4963"> 角阀 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4964"> 智能座便器 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4967"> 淋浴房 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-4970"> 感应洁具 </a>
+                <a target="_blank" href="/pinpai/brand-26-cate-5254"> 集成水槽 </a>
+                <b></b>
+                </p>
+                </li>
+                <li>
+                <strong>
+                <a target="_blank" href="/pinpai/detail-172">春红</a>
+                </strong>
+                <p class="logo">
+                <a target="_blank" href="/pinpai/detail-172">
+                <img src="images/h14.jpg" style="width: 138px; height: 60px; display: inline;" alt="春红">
+                </a>
+                </p>
+                <p class="pro_cates">
+                <a target="_blank" href="/pinpai/brand-172-cate-4841"> 竹地板 </a>
+                <b></b>
+                </p>
+                </li>
+                <li>
+                <strong>
+                <a target="_blank" href="/pinpai/detail-173">九木堂</a>
+                </strong>
+                <p class="logo">
+                <a target="_blank" href="/pinpai/detail-173">
+                <img src="images/h15.jpg" style="width: 138px; height: 60px; display: inline;" alt="九木堂">
+                </a>
+                </p>
+                <p class="pro_cates">
+                <a target="_blank" href="/pinpai/brand-173-cate-4841"> 竹地板 </a>
+                <b></b>
+                </p>
+                </li>
+            </ul>
+            
+        </div>
+        </div>
+        <!--内容结束-->
+        <div class="clear"></div>
+   		 <div class="Pagenum right">
+    	<div class="page">
+        	<a class="dq_page" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">...</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">下一页</a>
+        </div>
+        <div class="go_page right">
+        	<p>到第 <input type="text" value="" class="p_num" /> 页 <input type="submit" value="确定" class="p_sbu" /></p>
+        </div>
+    </div>
+   </div>
+<!-- This content end -->
+
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

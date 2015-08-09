@@ -1,0 +1,706 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,shopping_flow.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+{insert_scripts files="ext/my_cart.js"}
+<!-- This content start -->
+<div class="content c_both">
+    <!--内容区开始-->
+        <div class="g-big-w">
+        <ul class="g-xuanx">
+            <li class="g-li"><a href="javascript:;" style="cursor:default;" {if $smarty.get.step eq '' or $smarty.get.step eq 'cart'}class="active"{/if}>我的订单信息</a></li>
+            <li class="g-li1"><a href="javascript:;" style="cursor:default;" {if $smarty.get.step eq 'consignee'}class="active"{/if}>确认收货地址</a></li>
+            <li class="g-li2"><a href="javascript:;" style="cursor:default;" {if $smarty.get.step eq 'checkout'}class="active"{/if}>支付订单</a></li>
+        </ul>
+    <!-- {if $step eq "cart"} -->
+        <!-- cart info start -->
+        <form id="formCart" name="formCart" method="post" action="flow.php">
+        <div class="g-shou">
+          <div class="x-name"><h1 class="x-shang b_l">全部商品（{$total.real_goods_count}）</h1><div class="x-ti b_r"><div><p class="x-han b_l">已选商品（不含运费）<span class="x-huang">{$total.goods_price}</span></p><input name="" type="button" class="x-jie b_l" /></div></div></div>
+            <table width="100%" border="0">
+              <tr class="g-b-one">
+                <td width="26%" style="padding-left:35px;"><input name="" type="checkbox" value="" />  全选 <span class="x-shang1">商品信息</span></td>
+                <td width="10%" align="center">品牌</td>
+                <td width="10%" align="center">规格</td>
+                <td width="10%" align="center">单价</td>
+                <td width="10%" align="center">数量</td>
+                <td width="10%" align="center">金额</td>
+                <td width="10%" align="center">操作</td>
+              </tr>
+              <!-- {foreach from=$goods_list item=goods} -->
+                <tr class="g-b-one1 c_both">
+                  <td colspan="8">
+                    <table width="100%" border="0" class="g-kuangbiao">
+                        <tr>
+                          <td width="5%" valign="middle"><input name="" type="checkbox" value="" /></td>
+                          <td width="23%" valign="middle">
+                            <div class="g-img"><a href="goods.php?id={$goods.goods_id}"><img src="{$goods.goods_thumb}" class="b_l" /><p class="g-img-nanme b_l">{$goods.goods_name}</p></a></div>
+                          </td>
+                          <td width="12%" align="center" valign="middle">{$goods.goods_name}</td>
+                          <td width="12%" align="center" valign="middle">{$goods.goods_attr|nl2br}</td>
+                          <td width="12%" align="center">{$goods.goods_price}</td>
+                          <td width="12%" align="center" valign="middle"><input type="text" value="{$goods.goods_number}" class="spinnerExample text-center" />
+                          </td>
+                          <td width="12%" align="center" valign="middle">{$goods.subtotal}</td>
+                          <td width="12%" align="center" valign="middle"><a href="javascript:if (confirm('{$lang.drop_goods_confirm}')) location.href='flow.php?step=drop_goods&amp;id={$goods.rec_id}'; ">{$lang.drop}</a></td>
+                        </tr>
+                      </table>
+                    </td>
+                </tr>
+              <!-- {/foreach} -->
+              <!-- <tr class="g-b-one1 c_both">
+                <td colspan="8">
+                  <table width="100%" border="0" class="g-kuangbiao">
+                      <tr>
+                        <td width="5%" valign="middle"><input name="" type="checkbox" value="" /></td>
+                        <td width="23%" valign="middle"><div class="g-img"><img src="images/g-img.jpg" class="b_l" /><p class="g-img-nanme b_l">2014新款韩版邮包女包</p></div></td>
+                        <td width="12%" align="center" valign="middle">正泰电工</td>
+                        <td width="12%" align="center" valign="middle">厚度0.8cm</td>
+                        <td width="12%" align="center">100</td>
+                        <td width="12%" align="center" valign="middle"><input type="text" class="spinnerExample13"/>
+                        <script type="text/javascript">
+                        // $('.spinnerExample13').spinner({});
+                        </script>
+                        </td>
+                        <td width="12%" align="center" valign="middle">200(元)</td>
+                        <td width="12%" align="center" valign="middle">删除</td>
+                      </tr>
+                   </table>
+                 </td>
+                </tr> -->
+            </table>
+          <div class="g-shuom">
+                <div class="g-jl">
+                    <div class="b_l" style="width:200px;"><label><input name="" type="checkbox" value="" style="vertical-align: middle;" />  全选 </label>&nbsp;<a href="#" class="s_all">批量删除</a></div>
+                    <div class="g-mone b_r">商品合计（含运费）<span class="g-m">{$total.goods_price}</span></div>
+                </div>
+           </div>
+          <div class="g-fukuan b_r">
+                <div>
+                    <div class="g-jifen b_l"><label><input name="" type="checkbox" value="" />  使用积分</label></div>
+                    <p class="g-fui b_l">实际付款：<span class="g-qian">{$total.goods_price}</span></p>
+                </div>
+          </div>
+          <div class="c_both">
+            <div class="">
+              <input type="button" class="g-b-t3 b_l shopping-continue"  />
+              <div class="b_r">
+                <input type="button" class="g-b-t2"  />
+                <a href="flow.php?step=checkout"><input type="button" class="g-b-t5"  /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    <!--cart info end-->
+  <!-- {/if} -->
+
+  <!-- {if $step eq "consignee"} -->
+        <!-- 开始收货人信息填写界面 -->
+          {insert_scripts files='region.js,utils.js'}
+          <script type="text/javascript">
+            region.isAdmin = false;
+            {foreach from=$lang.flow_js item=item key=key}
+              var {$key} = "{$item}";
+            {/foreach}
+            {literal}
+            onload = function() {
+              if (!document.all){
+                document.forms['theForm'].reset();
+              }
+            }
+            {/literal}
+          </script>
+          <!-- 如果有收货地址，循环显示用户的收获地址 -->
+          <!-- {foreach from=$consignee_list item=consignee key=sn} -->
+          <form action="flow.php" method="post" name="theForm" id="theForm" onsubmit="return checkConsignee(this)">
+              <!-- #BeginLibraryItem "/Library/consignee.lbi" --><!-- #EndLibraryItem -->
+          </form>
+          <!-- {/foreach} -->
+          <!-- 结束收货人信息填写界面 -->
+    <!-- {/if} -->
+
+    <!-- {if $step eq "checkout"} -->
+    <!-- check kinds of info start -->
+        <!-- {if $step eq "checkout"} 开始订单确认界面 -->
+        <form action="flow.php" method="post" name="theForm" id="theForm" onsubmit="return checkOrderForm(this)">
+        <script type="text/javascript">
+        var flow_no_payment = "{$lang.flow_no_payment}";
+        var flow_no_shipping = "{$lang.flow_no_shipping}";
+        </script>
+        <div class="flowBox">
+        <h6><span>{$lang.goods_list}</span><!--{if $allow_edit_cart} --><a href="flow.php" class="f6">{$lang.modify}</a><!--{/if} --></h6>
+        <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+            <tr>
+              <th bgcolor="#ffffff">{$lang.goods_name}</th>
+              <th bgcolor="#ffffff">{$lang.goods_attr}</th>
+              <!-- {if $show_marketprice} -->
+              <th bgcolor="#ffffff">{$lang.market_prices}</th>
+              <!-- {/if} -->
+              <th bgcolor="#ffffff">{if $gb_deposit}{$lang.deposit}{else}{$lang.shop_prices}{/if}</th>
+              <th bgcolor="#ffffff">{$lang.number}</th>
+              <th bgcolor="#ffffff">{$lang.subtotal}</th>
+            </tr>
+            <!-- {foreach from=$goods_list item=goods} -->
+            <tr>
+              <td bgcolor="#ffffff">
+              <!-- {if $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'} -->
+          <a href="javascript:void(0)" onclick="setSuitShow({$goods.goods_id})" class="f6">{$goods.goods_name}<span style="color:#FF0000;">（{$lang.remark_package}）</span></a>
+          <div id="suit_{$goods.goods_id}" style="display:none">
+              <!-- {foreach from=$goods.package_goods_list item=package_goods_list} -->
+            <a href="goods.php?id={$package_goods_list.goods_id}" target="_blank" class="f6">{$package_goods_list.goods_name}</a><br />
+              <!-- {/foreach} -->
+          </div>
+          <!-- { else } -->
+          <a href="goods.php?id={$goods.goods_id}" target="_blank" class="f6">{$goods.goods_name}</a>
+                <!-- {if $goods.parent_id > 0} -->
+                <span style="color:#FF0000">（{$lang.accessories}）</span>
+                <!-- {elseif $goods.is_gift} -->
+                <span style="color:#FF0000">（{$lang.largess}）</span>
+                <!-- {/if} -->
+          <!-- {/if} -->
+          <!-- {if $goods.is_shipping} -->(<span style="color:#FF0000">{$lang.free_goods}</span>)<!-- {/if} -->
+              </td>
+              <td bgcolor="#ffffff">{$goods.goods_attr|nl2br}</td>
+              <!-- {if $show_marketprice} -->
+              <td align="right" bgcolor="#ffffff">{$goods.formated_market_price}</td>
+              <!-- {/if} -->
+              <td bgcolor="#ffffff" align="right">{$goods.formated_goods_price}</td>
+              <td bgcolor="#ffffff" align="right">{$goods.goods_number}</td>
+              <td bgcolor="#ffffff" align="right">{$goods.formated_subtotal}</td>
+            </tr>
+            <!-- {/foreach} -->
+            <!-- {if !$gb_deposit} 团购且有保证金时不显示 -->
+            <tr>
+              <td bgcolor="#ffffff" colspan="7">
+              <!-- {if $discount gt 0} -->{$your_discount}<br /><!-- {/if} -->
+              {$shopping_money}<!-- {if $show_marketprice} -->，{$market_price_desc}<!--{/if}-->
+              </td>
+            </tr>
+            <!-- {/if} -->
+          </table>
+      </div>
+      <div class="blank"></div>
+      <div class="flowBox">
+      <h6><span>{$lang.consignee_info}</span><a href="flow.php?step=consignee" class="f6">{$lang.modify}</a></h6>
+      <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+            <tr>
+              <td bgcolor="#ffffff">{$lang.consignee_name}:</td>
+              <td bgcolor="#ffffff">{$consignee.consignee|escape}</td>
+              <td bgcolor="#ffffff">{$lang.email_address}:</td>
+              <td bgcolor="#ffffff">{$consignee.email|escape}</td>
+            </tr>
+            <!-- {if $total.real_goods_count gt 0} -->
+            <tr>
+              <td bgcolor="#ffffff">{$lang.detailed_address}:</td>
+              <td bgcolor="#ffffff">{$consignee.address|escape} </td>
+              <td bgcolor="#ffffff">{$lang.postalcode}:</td>
+              <td bgcolor="#ffffff">{$consignee.zipcode|escape}</td>
+            </tr>
+            <!-- {/if} -->
+            <tr>
+              <td bgcolor="#ffffff">{$lang.phone}:</td>
+              <td bgcolor="#ffffff">{$consignee.tel} </td>
+              <td bgcolor="#ffffff">{$lang.backup_phone}:</td>
+              <td bgcolor="#ffffff">{$consignee.mobile|escape}</td>
+            </tr>
+             <!-- {if $total.real_goods_count gt 0} -->
+            <tr>
+              <td bgcolor="#ffffff">{$lang.sign_building}:</td>
+              <td bgcolor="#ffffff">{$consignee.sign_building|escape} </td>
+              <td bgcolor="#ffffff">{$lang.deliver_goods_time}:</td>
+              <td bgcolor="#ffffff">{$consignee.best_time|escape}</td>
+            </tr>
+            <!-- {/if} -->
+          </table>
+      </div>
+     <div class="blank"></div>
+    <!--{if $total.real_goods_count neq 0}-->
+    <div class="flowBox">
+    <h6><span>{$lang.shipping_method}</span></h6>
+    <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" id="shippingTable">
+            <tr>
+              <th bgcolor="#ffffff" width="5%">&nbsp;</th>
+              <th bgcolor="#ffffff" width="25%">{$lang.name}</th>
+              <th bgcolor="#ffffff">{$lang.describe}</th>
+              <th bgcolor="#ffffff" width="15%">{$lang.fee}</th>
+              <th bgcolor="#ffffff" width="15%">{$lang.free_money}</th>
+              <th bgcolor="#ffffff" width="15%">{$lang.insure_fee}</th>
+            </tr>
+            <!-- {foreach from=$shipping_list item=shipping} 循环配送方式 -->
+            <tr>
+              <td bgcolor="#ffffff" valign="top"><input name="shipping" type="radio" value="{$shipping.shipping_id}" {if $order.shipping_id eq $shipping.shipping_id}checked="true"{/if} supportCod="{$shipping.support_cod}" insure="{$shipping.insure}" onclick="selectShipping(this)" />
+              </td>
+              <td bgcolor="#ffffff" valign="top"><strong>{$shipping.shipping_name}</strong></td>
+              <td bgcolor="#ffffff" valign="top">{$shipping.shipping_desc}</td>
+              <td bgcolor="#ffffff" align="right" valign="top">{$shipping.format_shipping_fee}</td>
+              <td bgcolor="#ffffff" align="right" valign="top">{$shipping.free_money}</td>
+              <td bgcolor="#ffffff" align="right" valign="top">{if $shipping.insure neq 0}{$shipping.insure_formated}{else}{$lang.not_support_insure}{/if}</td>
+            </tr>
+            <!-- {/foreach} 循环配送方式 -->
+            <tr>
+              <td colspan="6" bgcolor="#ffffff" align="right"><label for="ECS_NEEDINSURE">
+                <input name="need_insure" id="ECS_NEEDINSURE" type="checkbox"  onclick="selectInsure(this.checked)" value="1" {if $order.need_insure}checked="true"{/if} {if $insure_disabled}disabled="true"{/if}  />
+                {$lang.need_insure} </label></td>
+            </tr>
+          </table>
+    </div>
+    <div class="blank"></div>
+        <!--{else}-->
+        <input name = "shipping" type="radio" value = "-1" checked="checked"  style="display:none"/>
+        <!--{/if}-->
+    <!--{if $is_exchange_goods neq 1 || $total.real_goods_count neq 0}-->
+    <div class="flowBox">
+    <h6><span>{$lang.payment_method}</span></h6>
+    <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" id="paymentTable">
+            <tr>
+              <th width="5%" bgcolor="#ffffff">&nbsp;</th>
+              <th width="20%" bgcolor="#ffffff">{$lang.name}</th>
+              <th bgcolor="#ffffff">{$lang.describe}</th>
+              <th bgcolor="#ffffff" width="15%">{$lang.pay_fee}</th>
+            </tr>
+            <!-- {foreach from=$payment_list item=payment} -->
+            <!-- 循环支付方式 -->
+            <tr>
+              <td valign="top" bgcolor="#ffffff"><input type="radio" name="payment" value="{$payment.pay_id}" {if $order.pay_id eq $payment.pay_id}checked{/if} isCod="{$payment.is_cod}" onclick="selectPayment(this)" {if $cod_disabled and $payment.is_cod eq "1"}disabled="true"{/if}/></td>
+              <td valign="top" bgcolor="#ffffff"><strong>{$payment.pay_name}</strong></td>
+              <td valign="top" bgcolor="#ffffff">{$payment.pay_desc}</td>
+              <td align="right" bgcolor="#ffffff" valign="top">{$payment.format_pay_fee}</td>
+            </tr>
+            <!-- {/foreach} 循环支付方式 -->
+          </table>
+    </div>
+    <!--{else}-->
+        <input name = "payment" type="radio" value = "-1" checked="checked"  style="display:none"/>
+    <!--{/if}-->
+    <div class="blank"></div>
+          <!-- {if $pack_list} 是否有包装 -->
+          <div class="flowBox">
+          <h6><span>{$lang.goods_package}</span></h6>
+          <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" id="packTable">
+            <tr>
+              <th width="5%" scope="col" bgcolor="#ffffff">&nbsp;</th>
+              <th width="35%" scope="col" bgcolor="#ffffff">{$lang.name}</th>
+              <th width="22%" scope="col" bgcolor="#ffffff">{$lang.price}</th>
+              <th width="22%" scope="col" bgcolor="#ffffff">{$lang.free_money}</th>
+              <th scope="col" bgcolor="#ffffff">{$lang.img}</th>
+            </tr>
+            <tr>
+              <td valign="top" bgcolor="#ffffff"><input type="radio" name="pack" value="0" {if $order.pack_id eq 0}checked="true"{/if} onclick="selectPack(this)" /></td>
+              <td valign="top" bgcolor="#ffffff"><strong>{$lang.no_pack}</strong></td>
+              <td valign="top" bgcolor="#ffffff">&nbsp;</td>
+              <td valign="top" bgcolor="#ffffff">&nbsp;</td>
+              <td valign="top" bgcolor="#ffffff">&nbsp;</td>
+            </tr>
+            <!-- {foreach from=$pack_list item=pack} 循环包装 -->
+            <tr>
+              <td valign="top" bgcolor="#ffffff"><input type="radio" name="pack" value="{$pack.pack_id}" {if $order.pack_id eq $pack.pack_id}checked="true"{/if} onclick="selectPack(this)" />
+              </td>
+              <td valign="top" bgcolor="#ffffff"><strong>{$pack.pack_name}</strong></td>
+              <td valign="top" bgcolor="#ffffff" align="right">{$pack.format_pack_fee}</td>
+              <td valign="top" bgcolor="#ffffff" align="right">{$pack.format_free_money}</td>
+              <td valign="top" bgcolor="#ffffff" align="center">
+                  <!-- {if $pack.pack_img} 是否有图片 -->
+                  <a href="data/packimg/{$pack.pack_img}" target="_blank" class="f6">{$lang.view}</a>
+                  <!-- {else} -->
+                  {$lang.no}
+                  <!-- {/if} -->
+               </td>
+            </tr>
+            <!-- {/foreach} 循环包装 -->
+          </table>
+       </div>
+             <div class="blank"></div>
+          <!-- {/if} 是否使用包装 -->
+
+          <!-- {if $card_list} 是否有贺卡 -->
+          <div class="flowBox">
+          <h6><span>{$lang.goods_card}</span></h6>
+          <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" id="cardTable">
+            <tr>
+              <th bgcolor="#ffffff" width="5%" scope="col">&nbsp;</th>
+              <th bgcolor="#ffffff" width="35%" scope="col">{$lang.name}</th>
+              <th bgcolor="#ffffff" width="22%" scope="col">{$lang.price}</th>
+              <th bgcolor="#ffffff" width="22%" scope="col">{$lang.free_money}</th>
+              <th bgcolor="#ffffff" scope="col">{$lang.img}</th>
+            </tr>
+            <tr>
+              <td bgcolor="#ffffff" valign="top"><input type="radio" name="card" value="0" {if $order.card_id eq 0}checked="true"{/if} onclick="selectCard(this)" /></td>
+              <td bgcolor="#ffffff" valign="top"><strong>{$lang.no_card}</strong></td>
+              <td bgcolor="#ffffff" valign="top">&nbsp;</td>
+              <td bgcolor="#ffffff" valign="top">&nbsp;</td>
+              <td bgcolor="#ffffff" valign="top">&nbsp;</td>
+            </tr>
+            <!-- {foreach from=$card_list item=card} 循环贺卡 -->
+            <tr>
+              <td valign="top" bgcolor="#ffffff"><input type="radio" name="card" value="{$card.card_id}" {if $order.card_id eq $card.card_id}checked="true"{/if} onclick="selectCard(this)"  />
+              </td>
+              <td valign="top" bgcolor="#ffffff"><strong>{$card.card_name}</strong></td>
+              <td valign="top" align="right" bgcolor="#ffffff">{$card.format_card_fee}</td>
+              <td valign="top" align="right" bgcolor="#ffffff">{$card.format_free_money}</td>
+              <td valign="top" align="center" bgcolor="#ffffff">
+                  <!-- {if $card.card_img} 是否有图片 -->
+                  <a href="data/cardimg/{$card.card_img}" target="_blank" class="f6">{$lang.view}</a>
+                  <!-- {else} -->
+                  {$lang.no}
+                  <!-- {/if} -->
+                </td>
+            </tr>
+            <!-- {/foreach} 循环贺卡 -->
+            <tr>
+              <td bgcolor="#ffffff"></td>
+              <td bgcolor="#ffffff" valign="top"><strong>{$lang.bless_note}:</strong></td>
+              <td bgcolor="#ffffff" colspan="3"><textarea name="card_message" cols="60" rows="3" style="width:auto; border:1px solid #ccc;">{$order.card_message|escape}</textarea></td>
+            </tr>
+          </table>
+        </div>
+                <div class="blank"></div>
+        <!-- {/if} 是否使用贺卡 -->
+
+      <div class="flowBox">
+    <h6><span>{$lang.other_info}</span></h6>
+      <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+            <!-- {if $allow_use_surplus} 是否使用余额 -->
+            <tr>
+              <td width="20%" bgcolor="#ffffff"><strong>{$lang.use_surplus}: </strong></td>
+              <td bgcolor="#ffffff"><input name="surplus" type="text" class="inputBg" id="ECS_SURPLUS" size="10" value="{$order.surplus|default:0}" onblur="changeSurplus(this.value)" {if $disable_surplus}disabled="disabled"{/if} />
+              {$lang.your_surplus}{$your_surplus|default:0} <span id="ECS_SURPLUS_NOTICE" class="notice"></span></td>
+            </tr>
+            <!-- {/if} 是否使用余额 -->
+            <!-- {if $allow_use_integral} 是否使用积分 -->
+            <tr>
+              <td bgcolor="#ffffff"><strong>{$lang.use_integral}</strong></td>
+              <td bgcolor="#ffffff"><input name="integral" type="text" class="input" id="ECS_INTEGRAL" onblur="changeIntegral(this.value)" value="{$order.integral|default:0}" size="10" />
+              {$lang.can_use_integral}:{$your_integral|default:0} {$points_name}，{$lang.noworder_can_integral}{$order_max_integral}  {$points_name}. <span id="ECS_INTEGRAL_NOTICE" class="notice"></span></td>
+            </tr>
+            <!-- {/if} 是否使用积分 -->
+            <!-- {if $allow_use_bonus} 是否使用红包 -->
+            <tr>
+              <td bgcolor="#ffffff"><strong>{$lang.use_bonus}:</strong></td>
+              <td bgcolor="#ffffff">
+                {$lang.select_bonus}
+                <select name="bonus" onchange="changeBonus(this.value)" id="ECS_BONUS" style="border:1px solid #ccc;">
+                  <option value="0" {if $order.bonus_id eq 0}selected{/if}>{$lang.please_select}</option>
+                  <!-- {foreach from=$bonus_list item=bonus} -->
+                  <option value="{$bonus.bonus_id}" {if $order.bonus_id eq $bonus.bonus_id}selected{/if}>{$bonus.type_name}[{$bonus.bonus_money_formated}]</option>
+                  <!-- {/foreach} -->
+                </select>
+
+                {$lang.input_bonus_no}
+                <input name="bonus_sn" type="text" class="inputBg" size="15" value="{$order.bonus_sn}" />
+                <input name="validate_bonus" type="button" class="bnt_blue_1" value="{$lang.validate_bonus}" onclick="validateBonus(document.forms['theForm'].elements['bonus_sn'].value)" style="vertical-align:middle;" />
+              </td>
+            </tr>
+            <!-- {/if} 是否使用红包 -->
+            <!-- {if $inv_content_list} 能否开发票 -->
+            <tr>
+              <td bgcolor="#ffffff"><strong>{$lang.invoice}:</strong>
+                <input name="need_inv" type="checkbox"  class="input" id="ECS_NEEDINV" onclick="changeNeedInv()" value="1" {if $order.need_inv}checked="true"{/if} />
+              </td>
+              <td bgcolor="#ffffff">
+                <!-- {if $inv_type_list} -->
+                {$lang.invoice_type}
+                <select name="inv_type" id="ECS_INVTYPE" {if $order.need_inv neq 1}disabled="true"{/if} onchange="changeNeedInv()" style="border:1px solid #ccc;">
+                {html_options options=$inv_type_list selected=$order.inv_type}</select>
+                <!-- {/if} -->
+                {$lang.invoice_title}
+                <input name="inv_payee" type="text"  class="input" id="ECS_INVPAYEE" size="20" {if !$order.need_inv}disabled="true"{/if} value="{$order.inv_payee}" onblur="changeNeedInv()" />
+                {$lang.invoice_content}
+              <select name="inv_content" id="ECS_INVCONTENT" {if $order.need_inv neq 1}disabled="true"{/if}  onchange="changeNeedInv()" style="border:1px solid #ccc;">
+
+                {html_options values=$inv_content_list output=$inv_content_list selected=$order.inv_content}
+
+                </select></td>
+            </tr>
+            <!-- {/if} -->
+            <tr>
+              <td valign="top" bgcolor="#ffffff"><strong>{$lang.order_postscript}:</strong></td>
+              <td bgcolor="#ffffff"><textarea name="postscript" cols="80" rows="3" id="postscript" style="border:1px solid #ccc;">{$order.postscript|escape}</textarea></td>
+            </tr>
+            <!-- {if $how_oos_list} 是否使用缺货处理 -->
+            <tr>
+              <td bgcolor="#ffffff"><strong>{$lang.booking_process}:</strong></td>
+              <td bgcolor="#ffffff"><!-- {foreach from=$how_oos_list key=how_oos_id item=how_oos_name} -->
+                <label>
+                <input name="how_oos" type="radio" value="{$how_oos_id}" {if $order.how_oos eq $how_oos_id}checked{/if} onclick="changeOOS(this)" />
+                {$how_oos_name}</label>
+                <!-- {/foreach} -->
+              </td>
+            </tr>
+            <!-- {/if} 缺货处理结束 -->
+          </table>
+    </div>
+    <div class="blank"></div>
+    <div class="flowBox">
+    <h6><span>{$lang.fee_total}</span></h6>
+          <!-- #BeginLibraryItem "/Library/order_total.lbi" --><!-- #EndLibraryItem -->
+           <div align="center" style="margin:8px auto;">
+            <input type="image" src="images/bnt_subOrder.gif" />
+            <input type="hidden" name="step" value="done" />
+            </div>
+    </div>
+    </form>
+        <!-- {/if} -->
+    <!-- check kinds of info end -->
+    <!-- {/if} -->
+
+    <!-- All complished start -->
+            <!-- {if $step eq "done"} -->
+        <!-- 订单提交成功 -->
+        <div class="flowBox" style="margin:30px auto 70px auto;">
+         <h6 style="text-align:center; height:30px; line-height:30px;">{$lang.remember_order_number}: <font style="color:red">{$order.order_sn}</font></h6>
+          <table width="99%" align="center" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff" style="border:1px solid #ddd; margin:20px auto;" >
+            <tr>
+              <td align="center" bgcolor="#FFFFFF">
+              <!--{if $order.shipping_name}-->{$lang.select_shipping}: <strong>{$order.shipping_name}</strong>，<!--{/if}-->{$lang.select_payment}: <strong>{$order.pay_name}</strong>。{$lang.order_amount}: <strong>{$total.amount_formated}</strong>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#FFFFFF">{$order.pay_desc}</td>
+            </tr>
+            <!-- {if $pay_online} -->
+            <!-- 如果是线上支付则显示支付按钮 -->
+            <tr>
+              <td align="center" bgcolor="#FFFFFF">{$pay_online}</td>
+            </tr>
+            <!-- {/if} -->
+          </table>
+          <!--{if $virtual_card}-->
+          <div style="text-align:center;overflow:hidden;border:1px solid #E2C822;background:#FFF9D7;margin:10px;padding:10px 50px 30px;">
+          <!--{foreach from=$virtual_card item=vgoods}-->
+            <h3 style="color:#2359B1; font-size:12px;">{$vgoods.goods_name}</h3>
+            <!--{foreach from=$vgoods.info item=card}-->
+              <ul style="list-style:none;padding:0;margin:0;clear:both">
+              <!--{if $card.card_sn}-->
+              <li style="margin-right:50px;float:left;">
+              <strong>{$lang.card_sn}:</strong><span style="color:red;">{$card.card_sn}</span>
+              </li><!--{/if}-->
+              <!--{if $card.card_password}-->
+              <li style="margin-right:50px;float:left;">
+              <strong>{$lang.card_password}:</strong><span style="color:red;">{$card.card_password}</span>
+              </li><!--{/if}-->
+              <!--{if $card.end_date}-->
+              <li style="float:left;">
+              <strong>{$lang.end_date}:</strong>{$card.end_date}
+              </li><!--{/if}-->
+              </ul>
+            <!--{/foreach}-->
+          <!--{/foreach}-->
+          </div>
+          <!--{/if}-->
+          <p style="text-align:center; margin-bottom:20px;">{$order_submit_back}</p>
+        </div>
+        <!-- {/if} -->
+    <!-- All complished end -->
+        </div>
+        <!--猜你喜欢-->
+        <div class="x-like">
+        <h1 class="x-cai">猜你喜欢</h1>
+        <ul class="x-libao">
+            <li><a href="#"><div class="x-img"><img src="images/in_08.jpg" /></div><P class="x-cp-name">泰兴樱桃抢鲜1斤装</P><div class="x-ja"><p class="b_l"><span class="x-huang">￥36.00</span> /组 </p><p class="b_r">98.00 </p></div></a></li>
+            <li><a href="#"><div class="x-img"><img src="images/in_08.jpg" /></div><P class="x-cp-name">泰兴樱桃抢鲜1斤装</P><div class="x-ja"><p class="b_l"><span class="x-huang">￥36.00</span> /组 </p><p class="b_r">98.00 </p></div></a></li>
+            <li><a href="#"><div class="x-img"><img src="images/in_08.jpg" /></div><P class="x-cp-name">泰兴樱桃抢鲜1斤装</P><div class="x-ja"><p class="b_l"><span class="x-huang">￥36.00</span> /组 </p><p class="b_r">98.00 </p></div></a></li>
+            <li><a href="#"><div class="x-img"><img src="images/in_08.jpg" /></div><P class="x-cp-name">泰兴樱桃抢鲜1斤装</P><div class="x-ja"><p class="b_l"><span class="x-huang">￥36.00</span> /组 </p><p class="b_r">98.00 </p></div></a></li>
+            <li><a href="#"><div class="x-img"><img src="images/in_08.jpg" /></div><P class="x-cp-name">泰兴樱桃抢鲜1斤装</P><div class="x-ja"><p class="b_l"><span class="x-huang">￥36.00</span> /组 </p><p class="b_r">98.00 </p></div></a></li>
+            <li><a href="#"><div class="x-img"><img src="images/in_08.jpg" /></div><P class="x-cp-name">泰兴樱桃抢鲜1斤装</P><div class="x-ja"><p class="b_l"><span class="x-huang">￥36.00</span> /组 </p><p class="b_r">98.00 </p></div></a></li>
+        </ul>
+        </div>
+        <!--猜你喜欢-->
+    <!--内容结束-->
+  </div>
+<div class="blank"></div>
+<!-- This content end -->
+
+  <!-- {if $step eq "cart"} -->
+  <!-- 购物车内容 -->
+  {* 包含脚本文件 *}
+  {insert_scripts files='showdiv.js'}
+  <script type="text/javascript">
+  {foreach from=$lang.password_js item=item key=key}
+    var {$key} = "{$item}";
+  {/foreach}
+  </script>
+       <!-- {if $smarty.session.user_id gt 0} -->
+       {insert_scripts files='transport.js'}
+       <script type="text/javascript" charset="utf-8">
+        function collect_to_flow(goodsId)
+        {
+          var goods        = new Object();
+          var spec_arr     = new Array();
+          var fittings_arr = new Array();
+          var number       = 1;
+          goods.spec     = spec_arr;
+          goods.goods_id = goodsId;
+          goods.number   = number;
+          goods.parent   = 0;
+          Ajax.call('flow.php?step=add_to_cart', 'goods=' + goods.toJSONString(), collect_to_flow_response, 'POST', 'JSON');
+        }
+        function collect_to_flow_response(result)
+        {
+          if (result.error > 0)
+          {
+            // 如果需要缺货登记，跳转
+            if (result.error == 2)
+            {
+              if (confirm(result.message))
+              {
+                location.href = 'user.php?act=add_booking&id=' + result.goods_id;
+              }
+            }
+            else if (result.error == 6)
+            {
+              openSpeDiv(result.message, result.goods_id);
+            }
+            else
+            {
+              alert(result.message);
+            }
+          }
+          else
+          {
+            location.href = 'flow.php';
+          }
+        }
+      </script>
+    <div class="blank"></div>
+  <!-- {/if} -->
+
+  <!-- {/if} -->
+
+  <!-- {if $fittings_list} 商品配件 -->
+  {insert_scripts files='transport.js'}
+  <script type="text/javascript" charset="utf-8">
+  function fittings_to_flow(goodsId,parentId)
+  {
+    var goods        = new Object();
+    var spec_arr     = new Array();
+    var number       = 1;
+    goods.spec     = spec_arr;
+    goods.goods_id = goodsId;
+    goods.number   = number;
+    goods.parent   = parentId;
+    Ajax.call('flow.php?step=add_to_cart', 'goods=' + goods.toJSONString(), fittings_to_flow_response, 'POST', 'JSON');
+  }
+  function fittings_to_flow_response(result)
+  {
+    if (result.error > 0)
+    {
+      // 如果需要缺货登记，跳转
+      if (result.error == 2)
+      {
+        if (confirm(result.message))
+        {
+          location.href = 'user.php?act=add_booking&id=' + result.goods_id;
+        }
+      }
+      else if (result.error == 6)
+      {
+        openSpeDiv(result.message, result.goods_id, result.parent);
+      }
+      else
+      {
+        alert(result.message);
+      }
+    }
+    else
+    {
+      location.href = 'flow.php';
+    }
+  }
+  </script>
+  <!-- {/if} -->
+
+
+        <!-- {if $step eq "login"} -->
+        {insert_scripts files='utils.js,user.js'}
+        <script type="text/javascript">
+        {foreach from=$lang.flow_login_register item=item key=key}
+          var {$key} = "{$item}";
+        {/foreach}
+
+        {literal}
+        function checkLoginForm(frm) {
+          if (Utils.isEmpty(frm.elements['username'].value)) {
+            alert(username_not_null);
+            return false;
+          }
+
+          if (Utils.isEmpty(frm.elements['password'].value)) {
+            alert(password_not_null);
+            return false;
+          }
+
+          return true;
+        }
+
+        function checkSignupForm(frm) {
+          if (Utils.isEmpty(frm.elements['username'].value)) {
+            alert(username_not_null);
+            return false;
+          }
+
+          if (Utils.trim(frm.elements['username'].value).match(/^\s*$|^c:\\con\\con$|[%,\'\*\"\s\t\<\>\&\\]/))
+          {
+            alert(username_invalid);
+            return false;
+          }
+
+          if (Utils.isEmpty(frm.elements['email'].value)) {
+            alert(email_not_null);
+            return false;
+          }
+
+          if (!Utils.isEmail(frm.elements['email'].value)) {
+            alert(email_invalid);
+            return false;
+          }
+
+          if (Utils.isEmpty(frm.elements['password'].value)) {
+            alert(password_not_null);
+            return false;
+          }
+
+          if (frm.elements['password'].value.length < 6) {
+            alert(password_lt_six);
+            return false;
+          }
+
+          if (frm.elements['password'].value != frm.elements['confirm_password'].value) {
+            alert(password_not_same);
+            return false;
+          }
+          return true;
+        }
+        {/literal}
+        </script>
+        <!-- {/if} -->
+
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+{foreach from=$lang.passport_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var username_exist = "{$lang.username_exist}";
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+</html>

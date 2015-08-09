@@ -1,0 +1,27 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- this page0 start -->
+    <div class="Pagenum right w-auto">
+      <div class="page">
+            {$page}
+        </div>
+        <!-- {if $page} -->
+            <div class="go_page right">
+              <p>到第 <input type="text" value="" class="p_num jumpto numonly" /> 页 <input type="submit" value="确定" class="p_sbu pagejump" /></p>
+            </div>
+        <!-- {/if} -->
+    </div>
+  </div>
+<!-- this page0 end -->
+{insert_scripts files='ext/my_page.js'}
+
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+{/literal}
+//-->
+</script>

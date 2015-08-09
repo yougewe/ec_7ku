@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,index.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+{insert_scripts files='ext/from_index1.js,ext/focus.js'}
+<!-- my content start -->
+<div class="content">
+
+<!-- powerpoint start -->
+  <div class="tent1"> 
+     <div class="in2_tent1_zhong right">
+        <div id="slide-box"> 
+          <div id="focus">
+            <ul>
+              <!-- {foreach from=$powerpoint item=p1} -->
+                <li>
+                  <div><a href="{$p1.url}" title="{$p1.text}" target="_blank"><img src="{$p1.src}" width="980" height="428"  /></a></div>
+                </li>
+              <!-- {/foreach} -->
+              <!-- <li>
+                <div><a href="###"><img src="images/b1.jpg" width="980" height="428" /></a></div>
+              </li> -->
+            </ul>
+          </div>          
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <div class="intent2">
+        <!-- constant introduction for choose reason start -->
+        <div class="m_nav"> <img src="images/m_nav01.jpg" />
+          <h3>选择七库网的理由</h3>
+        </div>
+        <ul class="m_n01">
+          <li><img src="images/mna01.jpg" />
+            <h4>一站式服务</h4>
+            <p>19年专注为您提供<br />
+              装饰工程五金辅料一站式服务</p>
+          </li>
+          <li><img src="images/mna02.jpg" />
+            <h4>性价比最优</h4>
+            <p>正规品牌授权先进的经营模式<br/>
+              获得了政府和厂家的支持<br/>
+              产品性价比最优</p>
+          </li>
+          <li><img src="images/mna03.jpg" />
+            <h4>品种多</h4>
+            <p>7库产品品种、规格齐全，让您<br/>
+              选择无忧</p>
+          </li>
+          <li class="bnone1"><img src="images/mna04.jpg" />
+            <h4>免费配送</h4>
+            <p>丰富的行业经验团队<br/>
+              免费配送，确认订单后24小时内送到</p>
+          </li>
+        </ul>
+        <div class="clear"></div>
+        <!-- constant introduction for choose reason start -->
+
+      <!-- product center start -->
+      <div class="m_nav"> <img src="images/m_nav01.jpg" />
+        <h3>产品中心</h3>
+      </div>
+      <div class="in_pro left">
+        <div id="tab02">
+
+  <!-- {if $best_goods} -->
+  <!-- {if $cat_rec_sign neq 1} -->
+          <div class="tamain wid1">
+            {if $cat_rec[1]}
+              <ul class="tab_menu02">
+                {foreach from=$cat_rec[1] item=rec_data key=i name=name}
+                  <li {if $i eq '0'}class="selectedB"{/if} {if $smarty.foreach.name.last}class="ls"{/if}>{$rec_data.cat_name}</li>
+                {/foreach}
+                  <!-- <li>装饰辅料</li>
+                  <li>建筑五金</li>
+                  <li>水电材料</li>
+                  <li class="ls selectedB">装饰涂料</li> -->
+              </ul>
+            {/if}
+          </div>
+          <div class="clear"></div>
+    <!-- {/if} -->
+  <!-- {/if} -->
+
+          <div class="tab_box02">
+
+            <!-- {foreach from=$cat_rec[1] item=rec_data name=name} -->
+              <div {if $smarty.foreach.name.iteration neq 1}class="hide"{/if}>
+               <div class="picbox">
+                 <div class="big_pic"><img src="images/bs{$smarty.foreach.name.iteration}.jpg" /></div> 
+                 <div class="small_pic">
+                 <div class="small_pic2">
+                  <!--{foreach from=$best_goods item=goods}-->
+                    <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
+                    <p><em>{if $promote_price neq ''}{$goods.promote_price}-{/if}{$goods.shop_price} </em></p>
+                    <p><strong>{$goods.short_style_name}</strong></p>
+                    <p>总销量：999<span>|</span>评价：888</p></a>
+                  <!-- {/foreach} -->
+                  </div>
+                 </div>
+                </div>
+              </div>
+              <!-- {/foreach} -->
+
+            <div class="hide">
+              <div class="picbox">
+               <div class="big_pic"><img src="images/bs2.jpg" /></div> 
+               <div class="small_pic">
+               <div class="small_pic2">
+                <a href="#"><img src="images/s1.jpg">
+                <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a>
+                <a href="#"><img src="images/s2.jpg">
+                <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a>
+                <a href="#"><img src="images/s3.jpg">
+                <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a>
+                <a href="#"><img src="images/s4.jpg">
+                <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a>
+                </div>
+               </div>
+            </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- product center end -->
+
+    <!-- sale rank board start -->
+    <div class="paihang top1 right">
+        <div class="tm"><span class="left">销售排行榜</span> <a class="right" href="#">更多</a></div>
+        <ul>
+        <!-- {foreach name=top_goods from=$top_goods item=goods}-->
+          <li class="pic_txt"><a href="{$goods.url}"><span class="apic"><img src="{$goods.thumb}" /></span>
+            <h4>{$goods.short_name}</h4>
+            </a>
+            <p>{$lang.shop_price}{$goods.price}<br/>
+              {$lang.goods_number}{$goods.goods_number}</p>
+          </li>
+        <!-- {/foreach} -->
+          <!-- <li class="pic_txt"><a href="#"><span class="apic"><img src="images/ph1.jpg" /></span>
+            <h4>***3小时前预约</h4>
+            </a>
+            <p>固力 <br/>
+              LFB5850P9S111</p>
+          </li> -->
+        </ul>
+      </div>
+      <div class="clear"></div>
+    <!-- sale rank board end -->
+
+    <!-- promotion info ad start -->
+    <div class="m_nav"> <img src="images/m_nav01.jpg" />
+      <h3>舒适套餐</h3>
+    </div>
+    <div class="left con1">
+        <div class="con11">
+        <ul>            
+            <li><a href="###" id="list_list1" onmouseover="set('list_list','list_nav','5','1')">办公室套餐</a></li>
+            <li><a href="###" id="list_list2" onmouseover="set('list_list','list_nav','5','2')">酒店套餐</a></li>
+            <li><a href="###" id="list_list3" onmouseover="set('list_list','list_nav','5','3')">连锁店套餐</a></li>
+            <li><a href="###" id="list_list4" onmouseover="set('list_list','list_nav','5','4')">三合一套餐</a></li>
+            <li><a href="###" id="list_list5" onmouseover="set('list_list','list_nav','5','5')">四合一套餐</a></li>
+        </ul>
+        </div>
+        <div class="con12">
+        <div class="img-scroll img-scroll0" id="list_nav1">
+       <span class="prev0 prev"></span>
+          <span class="next0 next"></span>
+          <div class="img-list img-list0">
+           <ul>
+              <li><a href="###"><img src="images/m1.jpg" width="260" height="200"/>
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m2.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m3.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m4.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+
+           </ul>
+           <div class="clear"></div>
+          </div>
+          </div>                    
+        <div class="img-scroll1 img-scroll" id="list_nav2">
+       <span class="prev1 prev"></span>
+          <span class="next1 next"></span>
+          <div class="img-list1 img-list">
+           <ul>
+              <li><a href="###"><img src="images/m1.jpg" width="260" height="200"/>
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m2.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m4.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m3.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+           </ul>
+           <div class="clear"></div>
+          </div>
+          </div>
+        <div class="img-scroll2 img-scroll" id="list_nav3">
+       <span class="prev2 prev"></span>
+          <span class="next2 next"></span>
+          <div class="img-list2 img-list">
+           <ul>
+               <li><a href="###"><img src="images/m4.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m1.jpg" width="260" height="200"/>
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m2.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m3.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+           </ul>
+           <div class="clear"></div>
+          </div>
+          </div>
+        <div class="img-scroll img-scroll3" id="list_nav4">
+       <span class="prev3 prev"></span>
+          <span class="next3 next"></span>
+          <div class="img-list3 img-list">
+           <ul>
+              <li><a href="###"><img src="images/m1.jpg" width="260" height="200"/>
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m2.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m3.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m4.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+
+           </ul>
+           <div class="clear"></div>
+          </div>
+          </div>
+        <div class="img-scroll img-scroll4" id="list_nav5">
+       <span class="prev3 prev"></span>
+          <span class="next3 next"></span>
+          <div class="img-list3 img-list">
+           <ul>
+              <li><a href="###"><img src="images/m2.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+                <li><a href="###"><img src="images/m1.jpg" width="260" height="200"/>
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m3.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+              <li><a href="###"><img src="images/m4.jpg" width="260" height="200" />
+              <p><em>￥200.0-350.0 </em></p>
+                <p><strong>瑞派REMP橡胶地板</strong></p>
+                <p>总销量：888<span>|</span>评价：888</p></a></li> 
+
+           </ul>
+           <div class="clear"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    <!-- promotion info ad end -->
+    
+    <!-- feedback info start -->
+    <div class="m_nav"> <img src="images/m_nav01.jpg" />
+      <h3>用户反馈</h3>
+    </div>
+    <div id="tab04">
+          <div class="wid3 tamain">
+            <ul class="tab_menu04">
+              <li>全部评价</li>
+              <li>晒图评价</li>
+              <li>平台活动</li>
+              <li class="ls selectedB">公司公告</li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+            
+          <!-- tab_box04 start -->
+          <div class="tab_box04">
+          <!-- All comments list info start -->
+            <div class="hide">
+             <div class="zixun">
+               <div class="z_left left"> 
+                 <h3><span class="left">全部评价</span><span class="right"><a href="#">更多>></a></span></h3>
+                 <ul>
+                  <!-- {foreach from=$comments_1_1 item=item1} -->
+                    <li><a href="#"><img src="images/sai.jpg" class="spic" /><h5>{$item1.goods_name}</h5><p>{$item1.content}</p><img src="images/hao.jpg" class="shao" /></a></li>
+                 <!-- {/foreach} -->
+                 </ul>
+               </div>
+               <div class="z_left right"> 
+                 <h3><span class="left">全部评价</span><span class="right"><a href="#">更多>></a></span></h3>
+                 <ul>
+                  <!-- {foreach from=$comments_1_2 item=item1} -->
+                    <li><a href="#"><img src="images/sai.jpg" class="spic" /><h5>{$item1.goods_name}</h5><p>{$item1.content}</p><img src="images/hao.jpg" class="shao" /></a></li>
+                 <!-- {/foreach} -->
+                 </ul>
+               </div>
+             </div>
+          </div>
+          <!-- All comments list info end -->
+
+       <!-- Comments has image list start -->
+          <div class="hide">
+            <div class="zixun">
+             <div class="z_left left"> 
+             <h3><span class="left">晒图评价</span><span class="right"><a href="#">更多>></a></span></h3>
+             <ul>
+                  <!-- {foreach from=$comments_1_1 item=item1} -->
+                    <li><a href="#"><img src="images/sai.jpg" class="spic" /><h5>{$item1.goods_name}</h5><p>{$item1.content}</p><img src="images/hao.jpg" class="shao" /></a></li>
+                 <!-- {/foreach} -->
+             </ul>
+             </div>
+             <div class="z_left right"> 
+             <h3><span class="left">晒图评价</span><span class="right"><a href="#">更多>></a></span></h3>
+             <ul>
+             
+                  <!-- {foreach from=$comments_1_2 item=item1} -->
+                    <li><a href="#"><img src="images/sai.jpg" class="spic" /><h5>{$item1.goods_name}</h5><p>{$item1.content}</p><img src="images/hao.jpg" class="shao" /></a></li>
+                 <!-- {/foreach} -->
+             </ul>
+             </div>
+             </div>
+          </div>
+          <!-- Comments has image list end -->
+
+          <!-- Platform activity list info start -->
+          <div class="hide">
+           <div class="zixun">
+             <div class="z_left left"> 
+             <h3><span class="left">特价商品</span><span class="right"><a href="#">更多>></a></span></h3>
+             <ul>
+              {foreach from=$promotion_goods item=goods1}
+                <li><a href="{$goods1.url}"><img src="{$goods1.goods_img}" class="spic img80x80" /><h5>{$goods1.short_style_name}[{$goods1.brand_name}]</h5><p>{if $goods1['brief'] eq ''}暂无简介{else}{$goods1.brief}{/if}</p><img src="images/hao.jpg" class="shao" /></a></li>
+              {/foreach}
+             </ul>
+             </div>
+
+             <div class="z_left right"> 
+             <h3><span class="left">促销活动</span><span class="right"><a href="snatch.php">更多>></a></span></h3>
+             <ul>
+              {foreach from=$promotion_info item=info1}
+                <li><a href="{$info1.url}"><img src="images/sai.jpg" class="spic img80x80" /><h5>{$info1.act_name}</h5><p>{$info1.act_name}{$info1.time}</p><img src="images/hao.jpg" class="shao" /></a></li>
+              {/foreach}
+
+             <!-- <li><a href="#"><img src="images/sai.jpg" class="spic" /><h5>晒单扣刹利器击球声音好听</h5><p>几天前刚入手测评完毕总体来说对得起这个价位，非常适用的一款平板。屏幕很清晰也很灵敏，系统顺畅……</p><img src="images/hao.jpg" class="shao" /></a></li> -->
+
+             </ul>
+             </div>
+             </div>
+          </div>
+          <!-- Platform activity list info end -->
+            
+          <!-- Company announcement list info start -->
+          <div class="">
+            <div class="zixun">
+             <div class="z_left left"> 
+             <h3><span class="left">最新资讯</span><span class="right"><a href="article_cat.php?id=12">更多>></a></span></h3>
+             <ul>
+              <!--{foreach from=$new_articles item=article}-->
+                <li>
+                <a href="{$article.cat_url}"><img src="images/sai.jpg" class="spic" /><h5>{$article.cat_name}&nbsp;&nbsp;[{$article.add_time}]</h5></a> <a href="{$article.url}" title="{$article.title|escape:html}"><p>{$article.title|truncate:100:"...":true}</p><img src="images/hao.jpg" class="shao" /></a>
+                </li>
+              <!--{/foreach}-->
+              </ul>
+             <!-- <ul>
+             <li><a href="#"><img src="images/sai.jpg" class="spic" /><h5>晒单几天试用感觉还行</h5><p>几天前刚入手测评完毕总体来，系统顺畅……</p><img src="images/hao.jpg" class="shao" /></a></li>
+             </ul> -->
+             </div>
+             <div class="z_left right"> 
+               <h3><span class="left">公司公告</span><span class="right"><a href="#">更多>></a></span></h3>
+               <ul>
+               <li><a href="#"><h5>{$shop_notice}</h5></a></li>
+               </ul>
+             </div>
+             </div> 
+            </div>
+            <!-- Company announcement list info end -->
+
+          </div>
+        </div>
+          <!-- tab_box04 end -->
+
+     <div class="clear"></div>
+    <!-- feedback info end -->
+
+      <!-- famous brand list start -->
+      <div class="m_nav"> <img src="images/m_nav01.jpg" />
+        <h3>知名品牌合作</h3>
+      </div>  
+      <div id="tab05">
+      <div class="wid4 tamain">
+        <ul class="tab_menu05">
+          <li class="selectedB">知名品牌</li>
+          <li class="ls">友情链接</li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+      <div class="tab_box05">
+        <div>
+        <!-- {foreach from=$brand_list item=brand1} -->
+          <a href="{$brand1.url}" title="{$brand1.brand_name}" target="_blank"><img src="{$data_dir}/brandlogo/{$brand1.brand_logo}" /></a>
+        <!-- {/foreach} -->
+       <!--  <a href="#"><img src="images/pp1.jpg" /></a><a href="#"><img src="images/pp2.jpg" /></a><a href="#"><img src="images/pp3.jpg" /></a><a href="#"><img src="images/pp4.jpg" /></a><a href="#"><img src="images/pp5.jpg" /></a><a href="#"><img src="images/pp6.jpg" /></a><a href="#"><img src="images/pp7.jpg" /></a>
+       <a href="#"><img src="images/pp2.jpg" /></a><a href="#"><img src="images/pp3.jpg" /></a><a href="#"><img src="images/pp4.jpg" /></a><a href="#"><img src="images/pp5.jpg" /></a><a href="#"><img src="images/pp6.jpg" /></a><a href="#"><img src="images/pp7.jpg" /></a><a href="#"><img src="images/pp1.jpg" /></a> -->
+   </div>
+        <div class="hide">
+        <!-- {if $img_links} -->
+          <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+          <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" style="height:71px;max-width:180px;" /></a>
+          <!--结束图片类型的友情链接{/foreach}-->
+        <!-- {/if} -->
+        <!-- <a href="#"><img src="images/pp2.jpg" /></a><a href="#"><img src="images/pp3.jpg" /></a><a href="#"><img src="images/pp4.jpg" /></a><a href="#"><img src="images/pp5.jpg" /></a><a href="#"><img src="images/pp6.jpg" /></a><a href="#"><img src="images/pp7.jpg" /></a><a href="#"><img src="images/pp1.jpg" /></a>
+        <a href="#"><img src="images/pp1.jpg" /></a><a href="#"><img src="images/pp2.jpg" /></a><a href="#"><img src="images/pp3.jpg" /></a><a href="#"><img src="images/pp4.jpg" /></a><a href="#"><img src="images/pp5.jpg" /></a><a href="#"><img src="images/pp6.jpg" /></a><a href="#"><img src="images/pp7.jpg" /></a> -->
+        </div>
+      </div>   
+    </div>
+    <!-- famous brand list start -->
+
+    </div>
+    <!-- feedback info (tab04) end -->
+
+    </div>
+<!-- my content end -->
+
+
+<div class="blank"></div>
+<div class="block clearfix">
+  <!--left start-->
+  <div class="AreaL">
+    <!--站内公告 start-->
+    <!--站内公告 end-->
+  <!-- TemplateBeginEditable name="左边区域" -->
+<!-- #BeginLibraryItem+s "/library/cart.lbi" -->
+ <!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem+s "/library/category_tree.lbi" -->
+ <!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem+s "/library/top10.lbi" -->
+ <!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem+s "/library/promotion_info.lbi" -->
+ <!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem+s "/library/order_query.lbi" -->
+ <!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem+s "/library/invoice_query.lbi" -->
+ <!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem "/library/vote_list.lbi" -->
+
+{insert name='vote'}
+ <!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem+s "/library/email_list.lbi" -->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+  </div>
+  <!--left end-->
+  <!--right start-->
+  <div class="AreaR">
+   <!--焦点图和站内快讯 START-->
+       <!-- #BeginLibraryItem+s "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
+       <!--news-->
+       <!--news end-->
+   <!--焦点图和站内快讯 END-->
+   <!--今日特价，品牌 start-->
+      <!--特价-->
+      <!-- #BeginLibraryItem+s "/library/recommend_promotion.lbi" --><!-- #EndLibraryItem -->
+      <!--品牌-->
+   <!-- TemplateBeginEditable name="右边主区域" -->
+<!-- #BeginLibraryItem+s "/library/recommend_best.lbi" -->
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem+s "/library/recommend_new.lbi" -->
+
+  </div>
+</div>
+</div>
+<div class="blank5"></div>
+
+ <!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem+s "/library/recommend_hot.lbi" -->
+ <!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem+s "/library/auction.lbi" -->
+ <!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem+s "/library/group_buy.lbi" -->
+ <!-- #EndLibraryItem -->
+
+<!-- TemplateEndEditable -->
+  </div>
+  <!--right end-->
+</div>
+<div class="blank5"></div>
+
+<!--帮助-->
+    <!-- #BeginLibraryItem+s "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!--帮助-->
+
+<!--友情链接 start-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

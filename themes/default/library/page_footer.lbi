@@ -1,0 +1,45 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- this footer start -->
+<!-- #EndLibraryItem -->
+<div class="clear" style="height:45px;"></div>
+<div class="foot1_wrap">
+  <div class="foot1">
+        <ul class="f_top"> 
+          <li class="tp1 left"><img src="images/zheng.png" /><strong>100%</strong>品牌授权正品</li>
+          <li class="tp2 left"><img src="images/ca.png" /><strong>7天</strong>无理由退换货</li>
+          <li class="tp3 left"><img src="images/tel.png" />客服电话：<strong>400-888-8888</strong>  09:00-22:30(周一至周日 )</li>
+          <li class="tp4 right"><a href="#">订阅我们的邮件</a></li>
+        </ul>
+   <div class="foot1_nav">
+      <!--{if $helps}-->
+      <!-- {foreach from=$helps item=help_cat name=name} -->
+        <dl class="fn0{$smarty.foreach.name.iteration}">
+          <dt>{$help_cat.cat_name}</dt>
+          <!-- {foreach from=$help_cat.article item=item} -->
+          <dd><a href="{$item.url}" title="{$item.title|escape:html}">{$item.short_title}</a></dd>
+          <!-- {/foreach} -->
+        </dl>
+      <!-- {/foreach} -->
+      <!--{/if}-->
+   </div>
+  <div class="foot2">
+    <dl>
+      <dt><img src="images/p1.jpg" /><img src="images/p2.jpg" /></dt>
+      <dd>
+        <div>
+         <!-- {if $navigator_list.bottom} -->
+         <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+            <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+            <!-- {if !$smarty.foreach.nav_bottom_list.last} -->
+               |
+            <!-- {/if} -->
+            <!-- {/foreach} -->
+        <!-- {/if} -->
+      </div>
+      <p>地址：{$shop_address} {$shop_postcode}  服务热线：{$service_phone}  Email：{$service_email}  {$icp_number}沪ICP备06001760号 </p>
+    </dd>
+  </dl>
+   </div>
+  </div>
+</div>
+

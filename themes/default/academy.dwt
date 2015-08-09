@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!-- This content start -->
+<div class="content">
+      <P class="h_mbao"><a href="#" class="h_mian">首页</a> > <span class="h_hover">商学院</span></P> 
+        <div><img src="images/s_03.jpg" /></div>
+        <!--内容区开始-->
+        <div class="h_hver">
+          <div class="s_tittle">
+              <div class="s_left b_l">
+                  <div class="xhdTitle">
+                      <!-- <div style="float:left;font-size:16px;color: #c70139;">享●互动</div> -->
+                        <a href="#">7库网●好评互动 </a>
+                    </div>
+                    <ul class="s_share c_both">
+                      <li><a href="#" class="b_l">海尔售后服务很好、但愿持续下去...   </a><span class="b_r">2015-2-1</span></li>
+                        <li><a href="#" class="b_l">13938274012  我买了海尔的洗衣机和电冰箱...    </a><span class="b_r">2015-2-1</span></li>
+                        <li><a href="#" class="b_l">13569972079  海尔热水器，质...  </a><span class="b_r">2015-2-1</span></li>
+                        <li><a href="#" class="b_l">15094779668  我感觉海尔的冰箱用的还可以…    </a><span class="b_r">2015-2-1</span></li>
+                        <li><a href="#" class="b_l">以前都是用别的牌子的 今年刚好换房子 家电也全不换 有人...    </a><span class="b_r">2015-2-1</span></li>
+                        <li><a href="#" class="b_l">小顺  亲，很抱歉给您带来的不便呢！我...  </a><span class="b_r">2015-2-1</span></li>
+                        <li><a href="#" class="b_l">nu********  我2010年1月买的电热水器前几天... </a><span class="b_r">2015-2-1</span></li>
+                        <li><a href="#" class="b_l">顺享粉  亲，请您耐心等待一下，相信... </a><span class="b_r">2015-2-1</span></li>
+                        <li><a href="#" class="b_l">15198281024  那我购买的海尔冰箱不到一个月时间...  </a><span class="b_r">2015-2-1</span></li>
+                        <li><a href="#" class="b_l">售后真的不错，打过电话及时到家检查...   </a><span class="b_r">2015-2-1</span></li>
+                        <li><a href="#" class="b_l">海尔售后服务很好、但愿持续下去...   </a><span class="b_r">2015-2-1</span></li>
+                    </ul>
+                </div>
+                <div class="s_left b_r">
+                  <div class="xhdTitle">
+                      <!-- <div style="float:left;font-size:16px;color: #c70139;">享●互动</div> -->
+                        <a href="#">7库网●活动 </a>
+                    </div>
+                    <ul class="s_share1 c_both">
+                      <li><a href="#"><strong>服务享</strong> - 【第二期 最美关键岗位投票】请投票支持你心中最美的关  </a></li>
+                        <li><a href="#"><strong>服务享</strong> -  健康净水享受 增值无忧服务  </a></li>
+                        <li><a href="#"><strong>服务享</strong> - 【第二期 最美关键岗位投票】请投票支持你心中最美的关  </a></li>
+                        <li><a href="#"><strong>服务享</strong> - 【第四期 最美关键岗位投票】请投票支持你心中最美的关键岗位明星  </a></li>
+                        <li><a href="#"><strong>服务享</strong> - 智能水盒子，你怎么看？   </a></li>
+                        <li><a href="#"><strong>服务享</strong> - 【第二期 最美关键岗位投票】请投票支持你心中最美的关  </a></li>
+                        <li><a href="#"><strong>服务享</strong> - 【第二期 最美关键岗位投票】请投票支持你心中最美的关  </a></li>
+                        <li><a href="#"><strong>服务享</strong> - 【第二期 最美关键岗位投票】请投票支持你心中最美的关  </a></li>
+                        <li><a href="#"><strong>服务享</strong> - 【第二期 最美关键岗位投票】请投票支持你心中最美的关  </a></li>
+                        <li><a href="#"><strong>服务享</strong> - 【第二期 最美关键岗位投票】请投票支持你心中最美的关  </a></li>
+                        <li><a href="#"><strong>服务享</strong> - 【第二期 最美关键岗位投票】请投票支持你心中最美的关  </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="s_feno c_both">
+              <div class="xhdTitle">
+                    <!-- <div style="float:left;font-size:16px;color: #c70139;">享●互动</div> -->
+                    <a href="#">7库网●分享 </a>
+                </div>
+                <!--分享滚动-->
+                <div class="sx_left b_l">
+                    <div class="leright">
+                      <div class="lesharetitle">爱体验</div>
+                        <div class="lesharecontpro">
+                            <div class="leprocont"> 
+                                <div class="leproctimg"> <img src="images/yhtyfx.png"> </div>
+                                <div class="leproctinfo" id="fristCusRemark" >服务挺好的，安装净水器之后，还询问家里其它海尔设备是否有问题，这种服务很贴心。我家的空调有些小问题，师傅还帮美式风格，顾名思义是来自于美国的装修和装饰风格。是殖民地风格中最著名的代表风格，某种意义上已经洲殖民地，忙给出建议，谢谢。</div>
+                            </div>
+                            <div class="leprocomment"> 
+                                <div id="fristUserName">王**</div>
+                                <div id="fristProductKindName">净水机</div>
+                                <div id="fristProvencName">河南</div>&nbsp;
+                                <div id="fristSatisCheck">好评</div>
+                                <a id="pingLunImg" href="#"><img style="float:right" src="images/pinglun.png">  </a>
+                            </div>
+                        </div>
+                        <div class="s3">
+                          <!--效果-->
+                            <div class="scrollbox" style="height:439px;width:540px;">
+                                <ul id="fontlist">
+                                    <li>
+                                        <div class="s_kuang">
+                                          <p class="s_mmmd"><span class="s_padd">郑**</span> <span class="s_padd">广东</span><span class="s_padd">无氟空调</span><span class="s_padd">好评</span></p>
+                                            <a href="#" class="s_hui">西班牙风格，英式风格，地中海风格，北欧风格等几大流派。所谓风格，是一种长久以来随着文化的潮流形成的一种持续不断，内容统一，有强烈的独特性的文化潮流。欧式...</a>
+                                            <a href="#" class="s_fufu b_r">回复</a> 
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="s_kuang">
+                                          <p class="s_mmmd"><span class="s_padd">郑**</span> <span class="s_padd">广东</span><span class="s_padd">无氟空调</span><span class="s_padd">好评</span></p>
+                                            <a href="#" class="s_hui">西班牙风格，英式风格，地中海风格，北欧风格等几大流派。所谓风格，是一种长久以来随着文化的潮流形成的一种持续不断，内容统一，有强烈的独特性的文化潮流。欧式...</a>
+                                            <a href="#" class="s_fufu b_r">回复</a> 
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="s_kuang">
+                                          <p class="s_mmmd"><span class="s_padd">郑**</span> <span class="s_padd">广东</span><span class="s_padd">无氟空调</span><span class="s_padd">好评</span></p>
+                                            <a href="#" class="s_hui">西班牙风格，英式风格，地中海风格，北欧风格等几大流派。所谓风格，是一种长久以来随着文化的潮流形成的一种持续不断，内容统一，有强烈的独特性的文化潮流。欧式...</a>
+                                            <a href="#" class="s_fufu b_r">回复</a> 
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--效果-->
+                        </div>
+                    </div>
+              </div>
+                <!--分享滚动-->
+                <div class="sx_left  b_r">
+                    <div class="lesharetitle">爱分享</div>
+                    <ul class="zhan_s c_both">
+                      <li>
+                        <div class="b_l"><img src="images/44_03.jpg" /></div><div class="s_f_r b_r"><a href="#"><h1>美式风格</h1><p>美式风格，顾名思义是来自于美国的装修和装饰风格。是殖民地风格中最著名的代表风格，某种意义上已经成了殖民地风格的代名词。美国是个移民国家，欧洲各国各民族人民来到美洲殖民地，把各民族各地区的装饰装修和家具风格都带到了美国，...</p></a></div>
+                       </li>
+                       <li>
+                        <div class="b_r"><img src="images/44_03.jpg" /></div><div class="s_f_r b_l"><a href="#"><h1>美式风格</h1><p>美式风格，顾名思义是来自于美国的装修和装饰风格。是殖民地风格中最著名的代表风格，某种意义上已经成了殖民地风格的代名词。美国是个移民国家，欧洲各国各民族人民来到美洲殖民地，把各民族各地区的装饰装修和家具风格都带到了美国，...</p></a></div>
+                       </li>
+                       <li>
+                        <div class="b_l"><img src="images/44_03.jpg" /></div><div class="s_f_r b_r"><a href="#"><h1>美式风格</h1><p>美式风格，顾名思义是来自于美国的装修和装饰风格。是殖民地风格中最著名的代表风格，某种意义上已经成了殖民地风格的代名词。美国是个移民国家，欧洲各国各民族人民来到美洲殖民地，把各民族各地区的装饰装修和家具风格都带到了美国，...</p></a></div>
+                       </li>
+                       <li>
+                        <div class="b_r"><img src="images/44_03.jpg" /></div><div class="s_f_r b_l"><a href="#"><h1>美式风格</h1><p>美式风格，顾名思义是来自于美国的装修和装饰风格。是殖民地风格中最著名的代表风格，某种意义上已经成了殖民地风格的代名词。美国是个移民国家，欧洲各国各民族人民来到美洲殖民地，把各民族各地区的装饰装修和家具风格都带到了美国，...</p></a></div>
+                       </li>
+                    </ul>
+                </div> 
+            </div>
+            <div class="c_both"></div>
+            <ul class="logo_ss">
+              <li><a href="#"><div class="s_ss"><img src="images/p_01.jpg" /></div></a></li>
+                <li><a href="#"><div class="s_ss"><img src="images/p_02.jpg" /></div></a></li>
+                <li><a href="#"><div class="s_ss"><img src="images/p_03.jpg" /></div></a></li>
+                <li><a href="#"><div class="s_ss"><img src="images/p_04.jpg" /></div></a></li>
+                <li><a href="#"><div class="s_ss"><img src="images/p_05.jpg" /></div></a></li>
+                <li><a href="#"><div class="s_ss"><img src="images/p_01.jpg" /></div></a></li>
+                <li><a href="#"><div class="s_ss"><img src="images/p_02.jpg" /></div></a></li>
+                <li><a href="#"><div class="s_ss"><img src="images/p_03.jpg" /></div></a></li>
+            </ul>
+        </div>
+        <!--内容结束-->
+   </div>
+<!-- This content end -->
+
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

@@ -1,0 +1,27 @@
+#tab05 .tab_box05 div a img {height:71px;max-width:180px;}
+.img80x80{height:80px;width:80px;}
+.color-red{color:#FF0000;}
+.captcha-img{height:40px;margin-left:2px;cursor:pointer;width: 80px;}
+#logout-top{color:#999595;font-size:11px;margin-left:20px;}
+#logout-top:hover{text-decoration:underline;cursor:default;}
+.cp_list li span{color:#ffffff;background:#2C6F5C;width:auto;padding:1px 10px;cursor:default;}
+/*.tb-pic a img{max-height:380px;max-width:380px;}*/
+.tb-pic a img.thumb{width:50px;height:50px;}
+.no-hlimit{height:auto}
+.no-wlimit{width:auto}
+.jianjie3 div>div:first-child{line-height:24px;vertical-align:middle;float:left;margin-right:5px;}
+.jianjie3 .xm_list{width:390px;}
+.jianjie3 .xm_list label{ border: 2px solid #eeeeee;color:#555;display:block;float:left;height:24px;line-height:24px;margin-bottom:5px;margin-right:12px;padding:0 12px;}
+.jianjie3 .xm_list label:hover,.jianjie3 .xm_list label.checked{ background:#075640; color:#fff;}
+.text-center{text-align:center;} 	
+.h-navo li a{width:100%;} 			/*user menu full width*/
+.pro_list .pro_des p{width:100%;} 	/*product name left align*/
+.xu-listimg ul{width:100%;/* max-height:660px; */} 		/*product predict box limited*/
+
+.top3_nav ul li a.active{color:#fff; background:#075640;}
+.w-auto{width:auto;} 		/*pageoverflow limit*/
+
+#speDiv .buy-or-not a{background:#075640;line-height:30px;font-size:14px;color:#ffffff;margin:3px 5px;padding:3px 10px;}
+/*购物车信息*/
+.gw_car .cart-container{border:1px solid #828081;background:#fff;color:#333;float:right;padding:5px 20px;width:147px;z-index:6;display:none;position:relative;}
+.gw_car:hover .cart-container{display:block;}

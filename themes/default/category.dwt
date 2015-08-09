@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+{insert_scripts files='ext/bankclass.js'}
+
+<!-- here's product list content start -->
+<div class="content">
+    <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+    <div class="intent2">
+      <div class="left_bar left">
+          <div class="l_list">
+                
+              <div class="vcon">
+              <ul class="vconlist clearfix">
+                  <li class="select"><a href="javascript:;">门</a></li>
+                  <li><a href="javascript:;">窗户</a></li>
+                  <li><a href="javascript:;">螺丝</a></li>
+                  <li><a href="javascript:;">门</a></li>
+                  <li><a href="javascript:;">窗户</a></li>
+                  <li><a href="javascript:;">螺丝</a></li>
+              </ul>
+              </div>
+              <div class="vtitle"><em class="v"></em>进口专区</div>
+              <div class="vcon" style="display: none;">
+                  <ul class="vconlist clearfix">
+                      <li><a href="javascript:;">门</a></li>
+                      <li><a href="javascript:;">窗户</a></li>
+                      <li><a href="javascript:;">螺丝</a></li>
+                      <li><a href="javascript:;">门</a></li>
+                      <li><a href="javascript:;">窗户</a></li>
+                      <li><a href="javascript:;">螺丝</a></li>
+                  </ul>
+               </div>
+              <div class="vtitle"><em class="v"></em>进口专区</div>
+              <div class="vcon" style="display: none;">
+                  <ul class="vconlist clearfix">
+                      <li><a href="javascript:;">门</a></li>
+                      <li><a href="javascript:;">窗户</a></li>
+                      <li><a href="javascript:;">螺丝</a></li>
+                      <li><a href="javascript:;">门</a></li>
+                      <li><a href="javascript:;">窗户</a></li>
+                      <li><a href="javascript:;">螺丝</a></li>
+                  </ul>
+              </div>
+          </div>
+          <a class="l_list" href="#"><img src="images/qunimg/gg1.png" /></a>
+          <a class="l_list" href="#"><img src="images/qunimg/gg2.png" /></a>
+          <div class="hot_left">
+            <h2 class="hot_sale">热销爆款</h2>
+              <div class="hot_pro"><a href="#"><img src="images/qunimg/gg3.png" /><p>纯天然绿色田园蔬菜</p><p><b>￥75.00</b></p></a></div>
+              <div class="hot_pro"><a href="#"><img src="images/qunimg/gg3.png" /><p>纯天然绿色田园蔬菜</p><p><b>￥75.00</b></p></a></div>
+              <div class="hot_pro"><a href="#"><img src="images/qunimg/gg3.png" /><p>纯天然绿色田园蔬菜</p><p><b>￥75.00</b></p></a></div>
+              <div class="hot_pro"><a href="#"><img src="images/qunimg/gg3.png" /><p>纯天然绿色田园蔬菜</p><p><b>￥75.00</b></p></a></div>
+          </div>
+      </div>
+      <div class="right_bar right">
+        <div class="hot_right left" style=" width:690px;">
+           <h2 class="press">热卖推荐</h2>
+          <div class="hot_press left">
+                <div class="hot_ps">
+                    <a href="#"><img src="images/qunimg/hg1.png" width="98" height="120" /></a>
+                      <div class="por_n"><a href="#"><h2>疯抢72小时</h2> <p>LFB5850P9S</p>  <h3>满30000<span>减100</span></h3></a></div>
+                  </div>
+                  <div class="hot_ps">
+                    <a href="#"><img src="images/qunimg/hg1.png" width="98" height="120" /></a>
+                      <div class="por_n"><a href="#"><h2>疯抢72小时</h2> <p>LFB5850P9S</p>  <h3>满30000<span>减100</span></h3></a></div>
+                  </div>
+                  <div class="hot_ps">
+                    <a href="#"><img src="images/qunimg/hg1.png" width="98" height="120" /></a>
+                      <div class="por_n"><a href="#"><h2>疯抢72小时</h2> <p>LFB5850P9S</p>  <h3>满30000<span>减100</span></h3></a></div>
+                  </div>
+              </div>
+          </div>
+          <div class="hot_right right" style="width:270px;">
+            <h2 class="press">热卖推荐</h2>
+              <div class="hot_press right">
+                <ul class="act_new">
+                    <li><a href="#">欧派木业品牌团，特价仅此一天</a></li>
+                      <li><a href="#">特价+返劵，欧派实木复合室内门</a></li>
+                      <li><a href="#">买多乐士抗甲醛墙面漆 ，赠双重礼</a></li>
+                      <li><a href="#">竹炭森呼吸全效无添加油漆涂料套装2899！</a></li>
+                      <li><a href="#">大自然地板强化复合木地板 HIGH爆您的</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="clear" style="height:20px"></div>
+          <div class="c1">
+          
+            <dl class="tbox notlight left">
+             <dd class="notlight">
+                 <div class="stepselect mt1">
+
+                  <!-- Category filter start -->
+                  <!--{if $brands.1 || $price_grade.1 || $filter_attr_list}-->
+                    <!-- {if $brands.1} -->
+                     <div class="stepselects spec-filter" style="display:block;overflow:hidden;height:45px;">
+                       <span class="itemname" style="padding:10px 0px; "><strong>{$lang.brand}</strong></span>
+                       <span class="egroup">
+                          <ul class="cp_list">
+                            <!--{foreach from=$brands item=v}-->
+                            <li>
+                              <!-- {if !$v.selected} -->
+                                <a href="{$v.url}">{$v.brand_name}</a>
+                              <!-- {else} -->
+                                <span>{$v.brand_name}</span>
+                              <!-- {/if} -->
+                            </li>
+                            <!--{/foreach}-->
+                          </ul> 
+                          <span><button class="btn-9 fold-or-not"></button></span>
+                      </span>
+                    </div>
+                  <!-- {/if} -->
+
+                  <!-- {if $price_grade.1} -->
+                     <div class="stepselects" style="display:block;overflow:hidden;max-height:110px;" id="price_filter">
+                       <span class="itemname" style="padding:10px 0px; "><strong>{$lang.price}</strong></span>
+                       <span class="egroup">
+                         <ul class="cp_list">
+                          <!--{foreach from=$price_grade item=v}-->
+                            <li>
+                              <!-- {if !$v.selected} -->
+                                <a href="{$v.url}">{$v.price_range}</a>
+                              <!-- {else} -->
+                                <span>{$v.price_range}</span>
+                              <!-- {/if} -->
+                            </li>
+                          <!--{/foreach}-->
+                         </ul> 
+                      <span><button onclick="Scroll(&#39;price_filter&#39;, 160, 2.0)" class="btn-9"></button></span>
+                      </span>
+                    </div>
+                  <!-- {/if} -->
+
+                  <!--{foreach from=$filter_attr_list item=filter_attr key=i}-->
+                     <div class="stepselects" id="other_filter{$i}" style="display:block;overflow:hidden;">
+                       <span class="itemname" style="padding:10px 0px; "><strong>{$filter_attr.filter_attr_name|escape:html}</strong></span>
+                       <span class="egroup">
+                         <ul class="cp_list">
+                          <!--{foreach from=$filter_attr.attr_list item=v}-->
+                            <li>
+                              <!-- {if !$v.selected} -->
+                                <a href="{$v.url}">{$v.attr_value}</a>
+                              <!-- {else} -->
+                                <span>{$v.attr_value}</span>
+                              <!-- {/if} -->
+                            </li>
+                          <!--{/foreach}-->
+                         </ul> 
+                      <span><button onclick="Scroll(&#39;other_filter{$i}&#39;, 160, 2.0)" class="btn-9"></button></span>
+                      </span>
+                    </div>
+                  <!-- {/foreach} -->
+                <!-- {/if} -->
+                <!-- Category filter end -->
+
+                 </div>
+            </dd>
+           </dl>
+          </div>
+          <div class="clear" style="height:30px;"></div>
+          <div class="list_title">
+            <div class="l_row left">排序：<span>
+              <a {if $pager.sort == 'goods_id'}class="dq_b"{/if} href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list">默认</a>
+              <a {if $pager.sort == 'sale_count'}class="dq_b"{/if} href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=sale_count&order=<!-- {if $pager.sort == 'sale_count' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list">销量</a>
+              <a {if $pager.sort == 'last_update'}class="dq_b"{/if} href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=<!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list">最新</a>
+              <a {if $pager.sort == 'shop_price'}class="dq_b"{/if} href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list">价格</a>
+             </span>
+            </div>
+              <div class="t_page right">
+                <span><!-- {if $pager.page_prev} --><a href="{$pager.page_prev}">{$lang.page_prev}</a><!-- {/if} --><!-- {if $pager.page_next} --><a href="{$pager.page_next}">{$lang.page_next}</a><!-- {/if} --></span>
+              </div>
+              <div class="num_id right">共<strong>{$pager.record_count}</strong>件商品 <strong>{$pager.page}</strong>/{$pager.page_count}</div>
+          </div>
+          <div class="pro_list">
+            <div class="pro_list2">
+                <!-- {if $goods_list} -->
+                  <ul>
+                    
+                    <!-- {foreach from=$goods_list item=goods1} -->
+                      <li>
+                          <a href="{$goods1.url}">
+                          <div class="pro_img"><img src="{$goods1.goods_img}" width="210" height="215" /><div class="hot"><img src="images/qunimg/hotb.png" /></div></div></a>
+                          <div class="pro_des"><h4><span class="left"><b>{$goods1.shop_price}</b> /组 </span><span class="right"><i>1111</i>个评论</span></h4><p class="left">{$goods1.goods_style_name}</p></div>
+                      </li>
+                    <!-- {/foreach} -->
+                    
+                    <!-- <li>
+                        <a href="shangpinxiangqin.html">
+                        <div class="pro_img"><img src="images/qunimg/p4.png" width="210" height="215"/></div></a>
+                        <div class="pro_des"><h4><span class="left"><b>￥36.00</b> /组 </span><span class="right"><i>1111</i>个评论</span></h4><p class="left">创维酷开智能双系统八核网络平板液晶电视(黑色)京东</p></div>
+                    </li> -->
+
+                  </ul>
+                  <!-- {else} -->
+                    <span>该分类没有搜索到商品</span>
+                  <!-- {/if} -->
+              </div>
+          </div>
+          <div class="clear"></div>
+          <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+          <div class="clear"></div>
+          <div class="related_pro">
+            <h3 class="related_t">相关配套</h3>
+              <ul>
+                <li><a href="#"><img src="images/qunimg/r1.jpg" width="180" height="170" /><p>木地板</p><p>￥36.00 /组</p></a></li>
+                  <li><a href="#"><img src="images/qunimg/r1.jpg" width="180" height="170" /><p>木地板</p><p>￥36.00 /组</p></a></li>
+                  <li><a href="#"><img src="images/qunimg/r1.jpg" width="180" height="170" /><p>木地板</p><p>￥36.00 /组</p></a></li>
+                  <li><a href="#"><img src="images/qunimg/r1.jpg" width="180" height="170" /><p>木地板</p><p>￥36.00 /组</p></a></li>
+                  <li><a href="#"><img src="images/qunimg/r1.jpg" width="180" height="170" /><p>木地板</p><p>￥36.00 /组</p></a></li>
+              </ul>
+           </div>
+          </div>
+      </div>
+  <div class="clear" style="height:50px;"></div>
+  <img src="images/qunimg/zc4.jpg" />
+  </div>
+<!-- here's product list content end -->
+
+<div class="blank"></div>
+<div class="block clearfix">
+  <!--left start-->
+  <div class="AreaL">
+    <!-- TemplateBeginEditable name="左边区域" -->
+
+ <!-- #BeginLibraryItem+s "/library/history.lbi" --><!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="左边广告区域（宽200px）" -->
+<!-- TemplateEndEditable -->
+    <!--AD end-->
+  </div>
+  <!--left end-->
+  <!--right start-->
+  <div class="AreaR">
+	 <!--组合搜索 开始-->
+	 <!--组合搜索 结束-->
+   <!-- TemplateBeginEditable name="右边区域" -->
+<!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
+
+<!-- {if $best_goods} -->
+<!-- {if $cat_rec_sign neq 1} -->
+<div class="box">
+<div class="box_2 centerPadd">
+  <div class="itemTit" id="itemBest">
+      {if $cat_rec[1]}
+      <h2><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, 0);">{$lang.all_goods}</a></h2>
+      {foreach from=$cat_rec[1] item=rec_data}
+      <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, {$rec_data.cat_id})">{$rec_data.cat_name}</a></h2>
+      {/foreach}
+      {/if}
+  </div>
+  <div id="show_best_area" class="clearfix goodsBox">
+  <!-- {/if} -->
+  <!--{foreach from=$best_goods item=goods}-->
+  <div class="goodsItem">
+         <span class="best"></span>
+           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
+           <a href="#"><img src="images/bnt_buy.gif" /></a> <a href="#"><img src="images/bnt_coll.gif" /></a>
+           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+           <font class="f1">
+           <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+           </font>
+        </div>
+  <!--{/foreach}-->
+  <div class="more"><a href="../search.php?intro=best"><img src="images/more.gif" /></a></div>
+  <!-- {if $cat_rec_sign neq 1} -->
+  </div>
+</div>
+</div>
+<div class="blank5"></div>
+  <!-- {/if} -->
+<!-- {/if} -->
+
+ <!-- #EndLibraryItem -->
+  <!-- #BeginLibraryItem+s "/library/goods_list.lbi" --><!-- #EndLibraryItem -->
+  <!-- #BeginLibraryItem+s "/library/pages.lbi" --><!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+
+  </div>  
+  <!--right end-->
+</div>
+<div class="blank5"></div>
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>] 
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

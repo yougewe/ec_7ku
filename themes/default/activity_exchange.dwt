@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!-- This content start -->
+  <div class="content">
+        <P class="h_mbao"><a href="#" class="h_mian">首页</a> > <span class="h_hover">换购专区</span></P> 
+        <div><img src="images/s_03.jpg" /></div>
+        <!--内容区开始-->
+        <div class="h_hver">
+            <div class="hd_bl b_l">
+                <!--产品列表开始-->
+                <ul class="SelectBrand_list">
+                    {foreach from=$goodslist item=goods1}    
+                        <li>
+                            <a href="{$goods1.url}" target="_blank">
+                                <dl>
+                                    <dd class="SelectBrand_left">
+                                        <div class="SelectBrand_left_top">
+                                            <img src="{$goods1.goods_thumb}" border="0" style="width:280px;height:60px;">
+                                            <p>{$goods1.goods_brief}</p>
+                                            <i>换购价<b>{$goods1.market_price}</b>元</i>
+                                            <s>市场价：{$goods1.shop_price}元</s>
+                                        </div>
+                                    </dd>
+                                    <dd class="SelectBrand_right">
+                                        <img src="{$goods1.goods_img}" border="0" style="width:600px;height:210px;" data-pinit="registered">
+                                        <div class="SelectBrand_right_bottom">累计售出 <span style="color:#555">1318</span> 件</div>
+                                        <em style="display: none;"><i class="enter_circle">神炭(除醛竹炭)</i></em>
+                                    </dd>
+                                </dl>
+                            </a>
+                        </li>
+                    {/foreach}
+
+                    <li>
+                    <a href="brand.php?id=36" target="_blank">
+                        <dl>
+                            <dd class="SelectBrand_left">
+                                <div class="SelectBrand_left_top">
+                                    <img src="images/hg1.jpg" border="0">
+                                    <p>
+                                    阻燃耐高温面罩，节能照明 ，取暖动力十足，轻松畅享温暖。                                    </p>
+                                    <i>换购价<b>1794</b>元</i>
+                                    <s>市场价：1589元</s>
+                                </div>
+                                <!--
+                                <div class="SelectBrand_left_bottom">
+                                奥普浴霸                                </div>-->
+                            </dd>
+                            <dd class="SelectBrand_right">
+                                <img src="images/1416602046801834133.jpg" border="0" data-pinit="registered">
+                                <div class="SelectBrand_right_bottom">累计售出 <span style="color:#555">13</span> 件</div>
+                                <em style="display: none;"><i class="enter_circle">奥普浴霸</i></em>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <!--产品列表开始-->
+            </div>
+            <div class="h_right b_r">
+                <!--侧边logo墙-->
+                <div class="right-main">
+                  <div class="xuzhi clearfix">
+                  <h3 class="new-titles">品牌开售预告<span class="next-day">2月10号上午10：00</span></h3>
+                        <div class="xu-listimg clearfix">
+                        <ul>
+                            <li id="nwlist0"><a href="#"><img src="images/qq7.jpg" width="108" height="34" alt="" /></a></li>
+                            <li id="nwlist1" class="brightnone"><a href="#"><img src="images/qq1.jpg" width="108" height="34" alt=""></a></li>
+                            <li id="nwlist0"><a href="#"><img src="images/qq1.jpg" width="108" height="34" alt=""></a></li>
+                            <li id="nwlist1" class="brightnone"><a href="#"><img src="images/qq2.jpg" width="108" height="34" alt=""></a> </li>
+                            <li id="nwlist0"><a href="#"><img src="images/qq2.jpg" width="108" height="34" alt=""></a></li>
+                            <li id="nwlist1" class="brightnone"><a href="#"><img src="images/qq1.jpg" width="108" height="34" alt=""></a></li>
+                            <li id="nwlist0"><a href="#"><img src="images/qq3.jpg" width="108" height="34" alt="" /></a></li>
+                            <li id="nwlist1" class="brightnone"><a href="#"><img src="images/qq3.jpg" width="108" height="34" alt=""></a></li>
+                            <li id="nwlist0"><a href="#"><img src="images/qq1.jpg" width="108" height="34" alt=""></a></li>
+                            <li id="nwlist1" class="brightnone"><a href="#"><img src="images/qq2.jpg" width="108" height="34" alt=""></a> </li>
+                            <li id="nwlist0"><a href="#"><img src="images/qq2.jpg" width="108" height="34" alt=""></a></li>
+                            <li id="nwlist1" class="brightnone"><a href="#"><img src="images/qq7.jpg" width="108" height="34" alt=""></a></li>
+                            <li id="nwlist0"><a href="#"><img src="images/qq3.jpg" width="108" height="34" alt="" /></a></li>
+                            <li id="nwlist1" class="brightnone"><a href="#"><img src="images/qq2.jpg" width="108" height="34" alt=""></a></li>
+                            <li id="nwlist0"><a href="#"><img src="images/qq1.jpg" width="108" height="34" alt=""></a></li>
+                            <li id="nwlist1" class="brightnone"><a href="#"><img src="images/qq3.jpg" width="108" height="34" alt=""></a> </li>
+                            <li id="nwlist0"><a href="#"><img src="images/qq2.jpg" width="108" height="34" alt=""></a></li>
+                            <li id="nwlist1" class="brightnone"><a href="#"><img src="images/qq1.jpg" width="108" height="34" alt=""></a></li>
+                        </ul>
+                    </div>
+                  </div> 
+                </div>
+                <!--侧边logo墙-->
+            </div>
+        </div>
+        <!--内容结束-->
+   </div>
+<!-- This content end -->
+
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

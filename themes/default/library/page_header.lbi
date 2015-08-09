@@ -1,0 +1,170 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{insert_scripts files='ext/jquery.min.js,ext/from_index_common.js'}
+{insert_scripts files='common.js,compare.js'}
+<script type="text/javascript">
+  var process_request = "{$lang.process_request}";
+  var compare_no_goods = "{$lang.compare_no_goods}";
+  var btn_buy = "{$lang.btn_buy}";
+  var is_cancel = "{$lang.is_cancel}";
+  var select_spe = "{$lang.select_spe}";
+  var add_to_cart= "{$lang.add_to_cart}";
+  // var $$=jQuery.noConflict();
+</script>
+<link href="{$ecs_theme_path}/css/basic.css" rel="stylesheet" type="text/css" />
+<link href="{$ecs_theme_path}/css/gongyong.css" rel="stylesheet" type="text/css" />
+<link href="{$ecs_theme_path}/css/index2.css" rel="stylesheet" type="text/css" />
+<link href="{$ecs_theme_path}/css/my_extra.css" rel="stylesheet" type="text/css" />
+{insert_scripts files='transport.js,utils.js,ext/jquery.spinner.js,ext/scrolltopcontrol.js,ext/my_global.js,ext/from_index_common.js'}
+ <div class="wrap">
+  <div class="top_wrap">
+    <div class="top1">
+        <dl><dt><p>欢迎来到{$shop_name_alias}7库网建材网站，{if $username}尊敬的<a href="user.php">{$username}</a><span id="logout-top">[退出管理]</span>{else}用户请 <a href="user.php?act=login">登录</a> | <a href="../user.php?act=register">注册</a>{/if}</p></dt>
+        <dd>
+        <p><a href="user.php">会员中心</a> | <a href="user.php?act=order_list">我的订单</a> | <a href="#">帮助中心</a> | <a href="#">收藏本站</a> | <strong>服务热线：400-888-8888</strong></p>
+        </dd></dl>
+    </div>
+    <div class="top2">
+      <div class="logo left"><a href="index.php"><img src="../images/logo.jpg" width="304" height="106"/></a></div>
+      <div class="top2_zhong right">
+      <div class="gw_car right"><ul><li><a href="flow.php">购物车<b>{insert name="cart_pcount"}</b>件</a></li><div class="cart-container">{insert name="cart_info"}</div></ul></div>
+       <div class="sou_suo right"> 
+        <div class="sou left">
+          <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r">
+            <input type="text" class="names" name="keywords" id="keyword" value="{$search_keywords|escape}" value="请输入搜索关键字" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}"/>
+            <input type="submit" class="nbt" value="" />
+            <!-- <a href="search.php?act=advanced_search">{$lang.advanced_search}</a> -->
+          </form>
+        </div>
+        <div class="clear"></div>
+        <div class="tr_title">{$lang.hot_search}：
+        <!-- <a href="tag_cloud.php">开关</a>&nbsp;<a href="tag_cloud.php">插座</a>&nbsp;<a href="tag_cloud.php">布线箱</a>&nbsp;<a href="tag_cloud.php">断路器</a> -->
+            <!-- {if $searchkeywords} -->
+               {foreach from=$searchkeywords item=val}<a href="search.php?keywords={$val|escape:url}">{$val}</a>
+               {/foreach}
+            <!-- {/if} -->
+          </div>
+        </div>
+       </div>
+      <div class="clear"></div>
+    </div>
+    <div class="top3">
+      <div class="top3_left left">
+        <div class='allsort'>
+          <div class='mt'><strong><a href="###">全部产品分类</a></strong>
+            <div class='extra'>&nbsp;</div>
+          </div>
+          <div class='mc'>
+            <div class='item'>
+                <span><h3><a href="###">3C数码</a></h3></span>
+                <div class='i-mc'>
+                    <div class='subitem'>
+                        <dl>
+                            <dt>
+                               <a href='#'>玻璃门系统</a> | 
+                               <a href='#'>感应门系统</a> | 
+                               <a href='#'>门禁系统</a> | 
+                               <a href='#'>木门五金</a> | 
+                               <a href='#'>移门五金</a> | 
+                               <a href='#'>家具五金</a> | 
+                            </dt>
+                            <dd>
+                                <h4>热门品牌</h4>
+                                <a href="#"><img src="../images/dd01.jpg" /></a>
+                                <a href="#"><img src="../images/dd02.jpg" /></a>
+                                <a href="#"><img src="../images/dd01.jpg" /></a>
+                                <a href="#"><img src="../images/dd02.jpg" /></a>
+                                <a href="#"><img src="../images/dd01.jpg" /></a>
+                                <a href="#"><img src="../images/dd02.jpg" /></a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+  <!-- div down item start -->
+  <!--{foreach from=$categories item=cat}-->
+    <div class="item">
+        <span><h3><a href="{$cat.url}">{$cat.name|escape:html}</a></h3></span>
+        <div class='i-mc'>
+          <div class='subitem'>
+             <dl>
+                 <dt>
+                   <!--{foreach from=$cat.cat_id item=child}-->
+                      <a href="{$child.url}">{$child.name|escape:html}</a> | 
+                       <!--{foreach from=$child.cat_id item=childer}-->
+                       &nbsp;&nbsp;<a href="{$childer.url}">{$childer.name|escape:html}</a>
+                     <!--{/foreach}-->
+                   <!--{/foreach}-->
+                  </dt>
+                 <dd>
+                  <!--{foreach from=$cat.cat_id item=child}-->
+                    <a href="{$child.url}">{$child.name|escape:html}</a>
+                     <!--{foreach from=$child.cat_id item=childer}-->
+                     &nbsp;&nbsp;<a href="{$childer.url}">{$childer.name|escape:html}</a>
+                   <!--{/foreach}-->
+                 <!--{/foreach}-->
+                </dd>
+              </dl>
+          </div>
+        </div>
+      </div>
+    <!--{/foreach}-->
+    <!-- div down item end -->
+
+        <!-- div mc end -->
+        </div>
+
+      <!--allsort end-->
+      </div>
+       
+  <!-- top3_left end -->
+  </div>
+
+      <div class="top3_zhong left">
+        <div class="top3_nav">
+          <ul>
+              <!-- <li><a href="../index.php"{if $navigator_list.config.index eq 1} class="active"{/if}>{$lang.home}<span></span></a></li> -->
+              <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+              <li><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="active"{/if}>{$nav.name}<span></span></a></li>
+             <!-- {/foreach} -->
+          </ul>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <!-- end top3 -->
+    </div>
+    
+<!--search start null, donnt remove it for it's function-->
+<div>
+  <div class="keys f_l">
+   <script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+            alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+  </div>
+<!--   <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r"  style="_position:relative; top:5px;">
+ <select name="category" id="category" class="B_input">
+    <option value="0">{$lang.all_category}</option>
+    {$category_list}
+  </select>
+ <input name="keywords" type="text" id="keyword" value="{$search_keywords|escape}" class="B_input" style="width:110px;"/>
+ <input name="imageField" type="submit" value="" class="go" style="cursor:pointer;" />
+ <a href="search.php?act=advanced_search">{$lang.advanced_search}</a>
+ </form> -->
+</div>
+<!--search end-->
