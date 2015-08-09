@@ -1,0 +1,3 @@
+# ec_7ku
+say ho ho to git
+no high tech here, please smile. haha...
